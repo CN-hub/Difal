@@ -12,46 +12,92 @@
 <style>
 /* ==================== VARIÁVEIS GLOBAIS ==================== */
 :root {
-  --primary: #0d47a1;
-  --primary-dark: #091a5c;
-  --primary-light: #5472d3;
+  --primary: #0b5ed7;
+  --primary-dark: #083b8c;
+  --primary-light: #4d8bf0;
   --secondary: #c62828;
   --secondary-dark: #8e0000;
-  --accent: #ff8f00;
+  --accent: #00b4ff;
   --success: #2e7d32;
   --warning: #f57c00;
   --info: #0288d1;
-  --bg-body: linear-gradient(135deg, #0d47a1 0%, #1a237e 100%);
+
+  --bg-body: #f4f6fb;
   --bg-card: #ffffff;
   --bg-header: #ffffff;
-  --text-primary: #1a237e;
+  --bg-hero: linear-gradient(135deg, #0a1e3f 0%, #0b5ed7 100%);
+  --text-primary: #0a1e3f;
   --text-secondary: #37474f;
   --text-muted: #78909c;
-  --border-color: #e0e0e0;
-  --shadow: 0 10px 40px rgba(13, 71, 161, 0.15);
-  --shadow-hover: 0 20px 50px rgba(13, 71, 161, 0.25);
-  --table-header-bg: linear-gradient(135deg, #0d47a1, #1a237e);
+  --border-color: #e2e8f0;
+  --shadow: 0 4px 20px rgba(10, 30, 63, 0.06);
+  --shadow-hover: 0 12px 40px rgba(11, 94, 215, 0.12);
+  --table-header-bg: linear-gradient(135deg, #0b5ed7, #083b8c);
   --input-bg: #ffffff;
-  --input-border: #e0e0e0;
+  --input-border: #e2e8f0;
   --stat-bg: #ffffff;
-  --disabled-bg: #f5f5f5;
+
+  /* Variáveis específicas do LOGIN */
+  --login-bg: linear-gradient(135deg, #e8eef9 0%, #d0dcf5 40%, #b8cdf0 100%);
+  --login-card-bg: rgba(255, 255, 255, 0.92);
+  --login-card-border: rgba(11, 94, 215, 0.15);
+  --login-card-shadow: 0 30px 80px rgba(11, 94, 215, 0.2);
+  --login-text: #0a1e3f;
+  --login-text-soft: #64748b;
+  --login-title: #0a1e3f;
+  --login-title-accent: #0b5ed7;
+  --login-input-bg: #ffffff;
+  --login-input-border: #dbe4f0;
+  --login-input-text: #0a1e3f;
+  --login-input-placeholder: #94a3b8;
+  --login-input-icon: #64748b;
+  --login-input-focus-bg: #ffffff;
+  --login-toggle-bg: rgba(11, 94, 215, 0.08);
+  --login-toggle-border: rgba(11, 94, 215, 0.15);
+  --login-toggle-icon: #64748b;
+  --login-toggle-active-bg: #0b5ed7;
+  --login-toggle-active-icon: #ffffff;
+  --login-glow: rgba(11, 94, 215, 0.15);
+  --login-logo-gradient: linear-gradient(135deg, #0b5ed7, #4d8bf0);
 }
 
 body.dark-theme {
-  --bg-body: linear-gradient(135deg, #121212 0%, #1e1e2f 100%);
-  --bg-card: #1e1e2e;
-  --bg-header: #1a1a2e;
-  --text-primary: #e0e0e0;
-  --text-secondary: #b0b0b0;
-  --text-muted: #888888;
-  --border-color: #2a2a3e;
-  --shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-  --shadow-hover: 0 20px 50px rgba(0, 0, 0, 0.4);
-  --table-header-bg: linear-gradient(135deg, #1e3a5f, #16213e);
-  --input-bg: #2a2a3e;
-  --input-border: #3a3a5e;
-  --stat-bg: #1e1e2e;
-  --disabled-bg: #2a2a3e;
+  --bg-body: linear-gradient(135deg, #0a0e1a 0%, #0d1b2e 100%);
+  --bg-card: #111827;
+  --bg-header: #0f172a;
+  --bg-hero: linear-gradient(135deg, #000a1a 0%, #0b2a5e 100%);
+  --text-primary: #e6edf7;
+  --text-secondary: #a8b6c8;
+  --text-muted: #6b7a90;
+  --border-color: #1e2a3f;
+  --shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  --shadow-hover: 0 20px 50px rgba(0, 0, 0, 0.6);
+  --table-header-bg: linear-gradient(135deg, #0b3d8a, #062a5e);
+  --input-bg: #0f1b2e;
+  --input-border: #1e2a3f;
+  --stat-bg: #111827;
+
+  --login-bg: linear-gradient(135deg, #050a1a 0%, #0a1e3f 40%, #0b2a5e 100%);
+  --login-card-bg: rgba(15, 23, 42, 0.78);
+  --login-card-border: rgba(0, 180, 255, 0.2);
+  --login-card-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+  --login-text: #ffffff;
+  --login-text-soft: rgba(255, 255, 255, 0.6);
+  --login-title: #ffffff;
+  --login-title-accent: #00b4ff;
+  --login-input-bg: rgba(255, 255, 255, 0.06);
+  --login-input-border: rgba(0, 180, 255, 0.2);
+  --login-input-text: #ffffff;
+  --login-input-placeholder: rgba(255, 255, 255, 0.4);
+  --login-input-icon: rgba(255, 255, 255, 0.5);
+  --login-input-focus-bg: rgba(255, 255, 255, 0.1);
+  --login-toggle-bg: rgba(255, 255, 255, 0.05);
+  --login-toggle-border: rgba(0, 180, 255, 0.2);
+  --login-toggle-icon: rgba(255, 255, 255, 0.7);
+  --login-toggle-active-bg: #00b4ff;
+  --login-toggle-active-icon: #ffffff;
+  --login-glow: rgba(0, 180, 255, 0.25);
+  --login-logo-gradient: linear-gradient(135deg, #0b5ed7, #00b4ff);
 }
 
 * {
@@ -64,437 +110,482 @@ body.dark-theme {
 body {
   background: var(--bg-body);
   min-height: 100vh;
-  transition: background 0.3s ease;
-}
-
-.corporate-header {
-  background: var(--bg-header);
-  box-shadow: var(--shadow);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  border-bottom: 3px solid var(--secondary);
-  transition: all 0.3s ease;
-}
-
-.header-container {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0.8rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  flex-shrink: 0;
-}
-
-.logo-icon {
-  background: linear-gradient(135deg, var(--primary), var(--primary-light));
-  width: 45px;
-  height: 45px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo-icon i {
-  font-size: 1.8rem;
-  color: #ffffff;
-}
-
-.logo-text h1 {
-  font-size: 1.2rem;
-  font-weight: 700;
+  transition: background 0.3s ease, color 0.3s ease;
   color: var(--text-primary);
 }
 
+/* ==================== SVG CUBO 3D ==================== */
+.gsf-cube {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 12px rgba(0, 180, 255, 0.6));
+  transition: transform 0.5s ease;
+}
+.gsf-cube:hover { transform: rotate(15deg) scale(1.05); }
+.gsf-cube .cube-top { fill: #4d8bf0; }
+.gsf-cube .cube-left { fill: #0b5ed7; }
+.gsf-cube .cube-right { fill: #00b4ff; }
+.gsf-cube .cube-line { stroke: #ffffff; stroke-width: 1.2; fill: none; opacity: 0.6; }
+
+/* ==================== ANIMAÇÕES ==================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-left {
+  opacity: 0; transform: translateX(-40px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-left.visible { opacity: 1; transform: translateX(0); }
+.reveal-right {
+  opacity: 0; transform: translateX(40px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-right.visible { opacity: 1; transform: translateX(0); }
+.reveal[data-delay="1"] { transition-delay: 0.05s; }
+.reveal[data-delay="2"] { transition-delay: 0.12s; }
+.reveal[data-delay="3"] { transition-delay: 0.2s; }
+.reveal[data-delay="4"] { transition-delay: 0.28s; }
+
+/* ==================== HERO ==================== */
+.hero-section {
+  position: relative;
+  background: var(--bg-hero);
+  border-radius: 0 0 32px 32px;
+  padding: 2rem 1.5rem 2.5rem;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 40px rgba(11, 94, 215, 0.25);
+}
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(0, 180, 255, 0.25) 0%, transparent 45%),
+    radial-gradient(circle at 80% 20%, rgba(11, 94, 215, 0.35) 0%, transparent 40%),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0 1px, transparent 1px 40px),
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0 1px, transparent 1px 40px);
+  pointer-events: none;
+}
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: -50%; right: -10%;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(0,180,255,0.25), transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.hero-content {
+  position: relative; z-index: 2;
+  max-width: 1440px; margin: 0 auto;
+  display: flex; justify-content: space-between;
+  align-items: center; gap: 2rem; flex-wrap: wrap;
+}
+.hero-brand { display: flex; align-items: center; gap: 18px; }
+.hero-logo-cube {
+  width: 64px; height: 64px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(0, 180, 255, 0.4);
+  border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  backdrop-filter: blur(10px);
+  padding: 10px;
+  animation: floatCube 4s ease-in-out infinite;
+}
+@keyframes floatCube {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-5px) rotate(3deg); }
+}
+.hero-titles h1 {
+  font-size: 1.8rem; font-weight: 800;
+  letter-spacing: -0.5px; line-height: 1.1;
+  color: #ffffff; text-transform: uppercase;
+}
+.hero-titles h1 span { color: #00b4ff; display: block; font-size: 2.2rem; }
+.hero-titles .hero-brand-sub {
+  font-size: 0.75rem; color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 3px; text-transform: uppercase;
+  margin-top: 6px; font-weight: 600;
+}
+.hero-titles .hero-brand-sub i { color: #00b4ff; margin-right: 6px; }
+.hero-badges { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+.hero-badge {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff; padding: 5px 12px;
+  border-radius: 40px; font-size: 0.7rem;
+  font-weight: 600; backdrop-filter: blur(8px);
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.hero-badge i { color: #00b4ff; }
+.hero-badge.gold {
+  background: linear-gradient(135deg, #ff8f00, #ff6f00);
+  border-color: transparent;
+  box-shadow: 0 4px 15px rgba(255, 143, 0, 0.4);
+}
+.hero-badge.gold i { color: #ffffff; }
+
+/* ==================== HEADER ==================== */
+.corporate-header {
+  background: var(--bg-header);
+  box-shadow: var(--shadow);
+  position: sticky; top: 0; z-index: 1000;
+  border-bottom: 3px solid var(--primary);
+  transition: all 0.3s ease;
+}
+.header-container {
+  max-width: 1440px; margin: 0 auto;
+  padding: 0.8rem 2rem;
+  display: flex; justify-content: space-between;
+  align-items: center; flex-wrap: wrap; gap: 1rem;
+}
+.logo-container { display: flex; align-items: center; gap: 15px; flex-shrink: 0; }
+.logo-icon {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  width: 45px; height: 45px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 6px 18px rgba(11, 94, 215, 0.3);
+  padding: 8px;
+}
+.logo-text h1 { font-size: 1.2rem; font-weight: 700; color: var(--text-primary); }
 .logo-text .brand {
-  font-size: 0.65rem;
-  color: var(--secondary);
-  font-weight: 600;
-  text-transform: uppercase;
+  font-size: 0.65rem; color: var(--secondary);
+  font-weight: 600; text-transform: uppercase; letter-spacing: 1px;
 }
-
 .year-badge {
-  background: var(--accent);
-  color: #ffffff;
-  padding: 3px 8px;
-  border-radius: 20px;
-  font-size: 0.6rem;
-  font-weight: 600;
-  margin-left: 8px;
+  background: var(--accent); color: #ffffff;
+  padding: 3px 8px; border-radius: 20px;
+  font-size: 0.6rem; font-weight: 700;
+  margin-left: 8px; letter-spacing: 0.5px;
 }
 
+/* ==================== THEME TOGGLE ==================== */
 .theme-toggle {
   background: var(--bg-card);
   border: 2px solid var(--border-color);
   border-radius: 40px;
-  padding: 5px;
-  display: flex;
-  gap: 5px;
+  padding: 4px;
+  display: flex; gap: 4px;
+  box-shadow: var(--shadow);
 }
-
 .theme-toggle-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  font-size: 1.2rem;
+  width: 38px; height: 38px; border-radius: 50%;
+  border: none; background: transparent;
+  cursor: pointer; font-size: 1.1rem;
   transition: all 0.3s ease;
-  color: var(--text-secondary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: var(--text-muted);
+  display: flex; align-items: center; justify-content: center;
 }
-
 .theme-toggle-btn.active {
-  background: var(--primary);
-  color: white;
+  background: var(--primary); color: white;
+  box-shadow: 0 4px 12px rgba(11, 94, 215, 0.35);
 }
 
-.user-menu {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
+.user-menu { display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }
 .user-profile {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+  display: flex; align-items: center; gap: 12px;
   padding: 5px 15px;
   background: var(--bg-card);
-  border-radius: 40px;
-  cursor: pointer;
+  border-radius: 40px; cursor: pointer;
   border: 2px solid var(--border-color);
   transition: all 0.3s ease;
+  box-shadow: var(--shadow);
 }
-
-.user-profile:hover {
-  border-color: var(--primary-light);
-  transform: scale(1.02);
-}
-
+.user-profile:hover { border-color: var(--primary-light); transform: scale(1.02); }
 .user-avatar {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  width: 40px; height: 40px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 1rem;
+  display: flex; align-items: center; justify-content: center;
+  color: #ffffff; font-weight: 700; font-size: 0.95rem;
+  letter-spacing: 0.5px;
 }
-
-.user-info {
-  display: flex;
-  flex-direction: column;
-}
-
-.user-name {
-  font-weight: 600;
-  color: var(--text-primary);
-  font-size: 0.85rem;
-}
-
+.user-info { display: flex; flex-direction: column; }
+.user-name { font-weight: 600; color: var(--text-primary); font-size: 0.85rem; }
 .user-role {
-  font-size: 0.65rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
+  font-size: 0.65rem; color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: 0.5px;
 }
-
 .access-level {
-  font-size: 0.6rem;
-  padding: 2px 6px;
-  border-radius: 12px;
-  margin-top: 2px;
-  display: inline-block;
-  text-align: center;
+  font-size: 0.6rem; padding: 2px 6px;
+  border-radius: 12px; margin-top: 2px;
+  display: inline-block; text-align: center;
 }
+.access-total { background: #c8e6c9; color: #1b5e20; }
+body.dark-theme .access-total { background: #1b5e20; color: #c8e6c9; }
 
-.access-total {
-  background: #c8e6c9;
-  color: #1b5e20;
-}
-
-body.dark-theme .access-total {
-  background: #1b5e20;
-  color: #c8e6c9;
-}
-
-/* Modal de Confirmação */
+/* ==================== MODAIS ==================== */
 .modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(4px);
+  position: fixed; top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
   z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex; align-items: center; justify-content: center;
   animation: fadeIn 0.3s ease;
 }
-
 .modal-container {
   background: var(--bg-card);
-  border-radius: 24px;
-  padding: 2rem;
-  max-width: 400px;
-  width: 90%;
+  border-radius: 24px; padding: 2rem;
+  max-width: 400px; width: 90%;
   text-align: center;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
   border: 1px solid var(--border-color);
   animation: slideInModal 0.3s ease;
 }
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes slideInModal {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
-
-.modal-icon {
-  font-size: 4rem;
-  color: var(--secondary);
-  margin-bottom: 1rem;
-}
-
-.modal-container h3 {
-  color: var(--text-primary);
-  font-size: 1.4rem;
-  margin-bottom: 0.8rem;
-}
-
-.modal-container p {
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-  margin-bottom: 1.5rem;
-}
-
-.modal-buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-}
-
+.modal-icon { font-size: 4rem; color: var(--secondary); margin-bottom: 1rem; }
+.modal-container h3 { color: var(--text-primary); font-size: 1.4rem; margin-bottom: 0.8rem; }
+.modal-container p { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem; }
+.modal-buttons { display: flex; gap: 1rem; justify-content: center; }
 .modal-btn {
-  padding: 10px 25px;
-  border: none;
-  border-radius: 40px;
-  font-weight: 600;
+  padding: 10px 25px; border: none; border-radius: 40px;
+  font-weight: 600; cursor: pointer;
+  transition: all 0.3s ease; font-size: 0.9rem;
+}
+.modal-btn-confirm { background: var(--secondary); color: white; }
+.modal-btn-confirm:hover { background: var(--secondary-dark); transform: scale(1.05); }
+.modal-btn-cancel { background: var(--border-color); color: var(--text-primary); }
+.modal-btn-cancel:hover { background: var(--text-muted); transform: scale(1.05); }
+
+/* ==================== APP WRAPPER ==================== */
+.app-wrapper { max-width: 1440px; margin: 1.5rem auto; padding: 0 1.5rem; }
+
+/* ==================== TABS ==================== */
+.tabs-nav {
+  display: flex; gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  background: var(--bg-card);
+  padding: 0.5rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+  overflow-x: auto;
+}
+.tab-btn {
+  flex: 1; min-width: 140px;
+  padding: 13px 20px;
+  border: none; background: transparent;
+  color: var(--text-secondary);
+  border-radius: 12px;
+  font-weight: 600; font-size: 0.85rem;
   cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 0.9rem;
+  display: flex; align-items: center; justify-content: center;
+  gap: 8px; transition: all 0.3s ease;
+  white-space: nowrap;
 }
-
-.modal-btn-confirm {
-  background: var(--secondary);
+.tab-btn i { font-size: 1rem; }
+.tab-btn:hover {
+  background: rgba(11, 94, 215, 0.08);
+  color: var(--primary);
+}
+.tab-btn.active {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
   color: white;
+  box-shadow: 0 6px 18px rgba(11, 94, 215, 0.35);
 }
+.tab-pane { display: none; }
+.tab-pane.active { display: block; animation: fadeIn 0.35s ease; }
 
-.modal-btn-confirm:hover {
-  background: var(--secondary-dark);
-  transform: scale(1.05);
-}
-
-.modal-btn-cancel {
-  background: var(--border-color);
-  color: var(--text-primary);
-}
-
-.modal-btn-cancel:hover {
-  background: var(--text-muted);
-  transform: scale(1.05);
-}
-
-.app-wrapper {
-  max-width: 1440px;
-  margin: 1.5rem auto;
-  padding: 0 1.5rem;
-}
-
+/* ==================== CARDS ==================== */
 .corporate-card {
   background: var(--bg-card);
-  border-radius: 20px;
-  padding: 1.5rem;
+  border-radius: 20px; padding: 1.5rem;
   box-shadow: var(--shadow);
   transition: all 0.3s ease;
   margin-bottom: 1.5rem;
   border: 1px solid var(--border-color);
 }
-
-.corporate-card:hover {
-  box-shadow: var(--shadow-hover);
-  transform: translateY(-2px);
-}
-
+.corporate-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
 .card-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.8rem;
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 1.5rem; padding-bottom: 0.8rem;
   border-bottom: 2px solid var(--border-color);
-  flex-wrap: wrap;
-  gap: 1rem;
+  flex-wrap: wrap; gap: 1rem;
 }
-
-.card-title {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
+.card-title { display: flex; align-items: center; gap: 10px; }
 .card-title i {
-  font-size: 1.5rem;
-  color: var(--primary);
-  background: rgba(13, 71, 161, 0.1);
-  padding: 10px;
-  border-radius: 12px;
+  font-size: 1.3rem; color: var(--primary);
+  background: rgba(11, 94, 215, 0.1);
+  padding: 10px; border-radius: 12px;
+  width: 42px; height: 42px;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.card-title h3 { color: var(--text-primary); font-size: 1.1rem; font-weight: 600; }
+.card-badge {
+  background: var(--primary); color: #ffffff;
+  padding: 4px 12px; border-radius: 40px;
+  font-size: 0.75rem; font-weight: 500;
 }
 
-.card-title h3 {
-  color: var(--text-primary);
-  font-size: 1.1rem;
+/* ==================== NF-e SECTION ==================== */
+.nfe-section {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1.5rem; margin-bottom: 1.5rem;
+}
+.nfe-visual {
+  background: linear-gradient(135deg, #0a1e3f 0%, #0b5ed7 100%);
+  border-radius: 20px; padding: 2rem;
+  position: relative; overflow: hidden;
+  color: #ffffff; min-height: 320px;
+  display: flex; flex-direction: column; justify-content: space-between;
+  box-shadow: 0 10px 40px rgba(11, 94, 215, 0.3);
+}
+.nfe-visual::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(circle at 80% 80%, rgba(0, 180, 255, 0.3), transparent 50%),
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.04) 0 1px, transparent 1px 30px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0 1px, transparent 1px 30px);
+  pointer-events: none;
+}
+.nfe-visual-content { position: relative; z-index: 2; }
+.nfe-visual h2 {
+  font-size: 1.5rem; font-weight: 800;
+  line-height: 1.2; margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+.nfe-visual h2 span { color: #00b4ff; display: block; }
+.nfe-visual p {
+  font-size: 0.85rem; opacity: 0.85;
+  margin-bottom: 1.5rem; line-height: 1.6;
+}
+.nfe-visual-footer {
+  position: relative; z-index: 2;
+  display: flex; align-items: center; gap: 12px;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+.nfe-visual-footer .brand-icon {
+  width: 44px; height: 44px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 180, 255, 0.4);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  padding: 8px;
+}
+.nfe-visual-footer .brand-text {
+  font-size: 0.75rem; font-weight: 600;
+  letter-spacing: 2px; text-transform: uppercase;
+  opacity: 0.9;
+}
+.nfe-features { display: flex; flex-direction: column; gap: 1rem; }
+.nfe-feature {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 1.2rem 1.4rem;
+  border: 1px solid var(--border-color);
+  display: flex; gap: 1rem; align-items: flex-start;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+}
+.nfe-feature:hover {
+  transform: translateX(4px);
+  border-color: var(--primary-light);
+  box-shadow: var(--shadow-hover);
+}
+.nfe-feature-icon {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; color: #ffffff; font-size: 1.1rem;
+}
+.nfe-feature-icon.blue { background: linear-gradient(135deg, #0b5ed7, #083b8c); box-shadow: 0 6px 18px rgba(11, 94, 215, 0.3); }
+.nfe-feature-icon.cyan { background: linear-gradient(135deg, #00b4ff, #0088cc); box-shadow: 0 6px 18px rgba(0, 180, 255, 0.3); }
+.nfe-feature-icon.pink { background: linear-gradient(135deg, #e91e63, #c2185b); box-shadow: 0 6px 18px rgba(233, 30, 99, 0.3); }
+.nfe-feature-text h4 { color: var(--text-primary); font-size: 0.9rem; font-weight: 700; margin-bottom: 4px; }
+.nfe-feature-text p { color: var(--text-secondary); font-size: 0.78rem; line-height: 1.5; }
+
+.nfe-flow {
+  display: flex; align-items: center; gap: 1rem;
+  margin-top: 1.2rem; padding: 1rem;
+  background: var(--bg-card);
+  border-radius: 16px;
+  border: 1px dashed var(--border-color);
+  flex-wrap: wrap; justify-content: space-between;
+}
+.nfe-flow-item {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 0.75rem; color: var(--text-secondary);
   font-weight: 600;
 }
+.nfe-flow-item i { font-size: 1.3rem; }
+.nfe-flow-arrow { color: var(--primary-light); font-size: 1rem; }
 
-.card-badge {
-  background: var(--secondary);
-  color: #ffffff;
-  padding: 4px 12px;
-  border-radius: 40px;
-  font-size: 0.75rem;
-  font-weight: 500;
+/* ==================== STATS ==================== */
+.stats-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem; margin-bottom: 1.5rem;
 }
+.stat-item {
+  background: var(--stat-bg);
+  border-radius: 16px; padding: 1.2rem;
+  box-shadow: var(--shadow);
+  display: flex; align-items: center; gap: 1rem;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  position: relative; overflow: hidden;
+}
+.stat-item::before {
+  content: '';
+  position: absolute; top: 0; left: 0;
+  width: 4px; height: 100%;
+  background: linear-gradient(180deg, var(--primary), var(--accent));
+}
+.stat-item:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+.stat-icon {
+  width: 55px; height: 55px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 6px 18px rgba(11, 94, 215, 0.3);
+}
+.stat-icon i { font-size: 1.6rem; color: #ffffff; }
+.stat-content h4 {
+  color: var(--text-muted); font-size: 0.7rem;
+  font-weight: 600; margin-bottom: 4px;
+  text-transform: uppercase; letter-spacing: 0.5px;
+}
+.stat-value { color: var(--text-primary); font-size: 1.4rem; font-weight: 700; }
+.stat-label { color: var(--text-muted); font-size: 0.65rem; }
 
+/* ==================== INPUTS / BUTTONS ==================== */
 .pro-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.2rem;
-  margin-bottom: 1.2rem;
+  gap: 1.2rem; margin-bottom: 1.2rem;
 }
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.2rem;
-  margin-bottom: 1.5rem;
-}
-
-.stat-item {
-  background: var(--stat-bg);
-  border-radius: 16px;
-  padding: 1.2rem;
-  box-shadow: var(--shadow);
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  border: 1px solid var(--border-color);
-  transition: all 0.3s ease;
-}
-
-.stat-item:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-hover);
-}
-
-.stat-icon {
-  width: 55px;
-  height: 55px;
-  background: linear-gradient(135deg, var(--primary), var(--primary-light));
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.stat-icon i {
-  font-size: 1.8rem;
-  color: #ffffff;
-}
-
-.stat-content h4 {
-  color: var(--text-muted);
-  font-size: 0.7rem;
-  font-weight: 500;
-  margin-bottom: 4px;
-  text-transform: uppercase;
-}
-
-.stat-value {
-  color: var(--text-primary);
-  font-size: 1.4rem;
-  font-weight: 700;
-}
-
-.stat-label {
-  color: var(--text-muted);
-  font-size: 0.65rem;
-}
-
-.input-group {
-  margin-bottom: 1rem;
-}
-
+.input-group { margin-bottom: 1rem; }
 .input-group label {
-  display: block;
-  margin-bottom: 0.4rem;
+  display: block; margin-bottom: 0.4rem;
   color: var(--text-secondary);
-  font-weight: 500;
-  font-size: 0.8rem;
+  font-weight: 600; font-size: 0.78rem;
 }
-
-.input-group label i {
-  color: var(--primary);
-  margin-right: 6px;
-}
-
-.input-wrapper {
-  position: relative;
-}
-
-.input-wrapper i {
-  position: absolute;
-  left: 12px;
-  top: 50%;
+.input-group label i { color: var(--primary); margin-right: 6px; }
+.input-wrapper { position: relative; }
+.input-wrapper > i {
+  position: absolute; left: 12px; top: 50%;
   transform: translateY(-50%);
-  color: var(--text-muted);
-  font-size: 0.9rem;
-  z-index: 1;
+  color: var(--text-muted); font-size: 0.9rem;
+  z-index: 1; pointer-events: none;
 }
-
 .input-wrapper input,
 .input-wrapper select {
   width: 100%;
-  padding: 10px 12px 10px 38px;
+  padding: 11px 12px 11px 38px;
   border: 2px solid var(--input-border);
   border-radius: 10px;
   font-size: 0.85rem;
@@ -503,166 +594,94 @@ body.dark-theme .access-total {
   color: var(--text-primary);
   appearance: none;
 }
-
 .input-wrapper input:focus,
 .input-wrapper select:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(13, 71, 161, 0.1);
+  box-shadow: 0 0 0 4px rgba(11, 94, 215, 0.1);
 }
-
-.radio-group {
-  display: flex;
-  gap: 1.5rem;
-  padding: 0.3rem 0;
-  flex-wrap: wrap;
-}
-
+.radio-group { display: flex; gap: 1.5rem; padding: 0.5rem 0; flex-wrap: wrap; }
 .radio-group label {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  cursor: pointer;
-  font-size: 0.8rem;
+  display: flex; align-items: center; gap: 6px;
+  cursor: pointer; font-size: 0.8rem; font-weight: 500;
 }
-
 .radio-group input[type="radio"] {
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
-  accent-color: var(--primary);
+  width: 16px; height: 16px;
+  cursor: pointer; accent-color: var(--primary);
 }
-
 .btn {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 10px;
-  font-weight: 600;
-  font-size: 0.85rem;
+  padding: 11px 22px;
+  border: none; border-radius: 10px;
+  font-weight: 600; font-size: 0.85rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  border: 2px solid transparent;
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 8px; border: 2px solid transparent;
 }
-
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary), var(--primary-light));
-  color: #ffffff;
-}
-
-.btn-primary:hover {
-  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-  transform: translateY(-2px);
-}
-
-.btn-secondary {
-  background: var(--secondary);
-  color: #ffffff;
-}
-
-.btn-secondary:hover {
-  background: var(--secondary-dark);
-  transform: translateY(-2px);
-}
-
-.btn-outline {
-  background: transparent;
-  border-color: var(--primary);
-  color: var(--primary);
-}
-
-.btn-outline:hover {
-  background: var(--primary);
-  color: #ffffff;
-}
-
-.btn-success {
-  background: var(--success);
-  color: #ffffff;
-}
-
-.btn-success:hover {
-  background: #1b5e20;
-  transform: translateY(-2px);
-}
-
-.btn-danger {
-  background: var(--secondary);
-  color: #ffffff;
-}
-
-.result-panel {
   background: linear-gradient(135deg, var(--primary), var(--primary-dark));
   color: #ffffff;
-  padding: 1.2rem;
-  border-radius: 16px;
-  margin-top: 1.2rem;
+  box-shadow: 0 6px 18px rgba(11, 94, 215, 0.3);
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(11, 94, 215, 0.4); }
+.btn-secondary { background: var(--secondary); color: #ffffff; box-shadow: 0 6px 18px rgba(198, 40, 40, 0.25); }
+.btn-secondary:hover { background: var(--secondary-dark); transform: translateY(-2px); }
+.btn-outline { background: transparent; border-color: var(--primary); color: var(--primary); }
+.btn-outline:hover { background: var(--primary); color: #ffffff; }
+.btn-success { background: var(--success); color: #ffffff; }
+.btn-success:hover { background: #1b5e20; transform: translateY(-2px); }
+.btn-danger { background: var(--secondary); color: #ffffff; }
+.btn-danger:hover { background: var(--secondary-dark); transform: translateY(-2px); }
+.btn-lg { padding: 14px 28px; font-size: 0.9rem; }
+
+/* ==================== RESULT PANEL ==================== */
+.result-panel {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #ffffff; padding: 1.2rem;
+  border-radius: 16px; margin-top: 1.2rem;
   animation: slideUp 0.4s ease;
+  box-shadow: 0 10px 30px rgba(11, 94, 215, 0.3);
+  position: relative; overflow: hidden;
 }
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.result-panel::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(circle at 90% 10%, rgba(0, 180, 255, 0.3), transparent 40%),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0 1px, transparent 1px 30px);
+  pointer-events: none;
 }
-
 .result-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 1rem;
-  padding-bottom: 0.6rem;
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 1rem; padding-bottom: 0.6rem;
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  position: relative; z-index: 2;
 }
-
-.result-header i {
-  font-size: 1.5rem;
-  color: var(--accent);
-}
-
-.result-header h4 {
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
+.result-header i { font-size: 1.5rem; color: var(--accent); }
+.result-header h4 { font-size: 1.1rem; font-weight: 600; }
 .result-content {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.8rem;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem; position: relative; z-index: 2;
 }
-
 .result-item {
   background: rgba(255, 255, 255, 0.1);
-  padding: 0.8rem;
-  border-radius: 12px;
-  text-align: center;
+  padding: 0.8rem; border-radius: 12px;
+  text-align: center; backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
-
 .result-item .label {
-  font-size: 0.7rem;
-  opacity: 0.9;
+  font-size: 0.7rem; opacity: 0.9;
   margin-bottom: 6px;
-  text-transform: uppercase;
+  text-transform: uppercase; letter-spacing: 0.5px;
+}
+.result-item .value { font-size: 1.2rem; font-weight: 700; }
+.result-item .detail { font-size: 0.65rem; opacity: 0.75; }
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.result-item .value {
-  font-size: 1.2rem;
-  font-weight: 700;
-}
-
-.result-item .detail {
-  font-size: 0.65rem;
-  opacity: 0.7;
-}
-
+/* ==================== TABELAS ==================== */
 .table-container {
   background: var(--bg-card);
   border-radius: 16px;
@@ -670,265 +689,425 @@ body.dark-theme .access-total {
   border: 1px solid var(--border-color);
   margin-top: 1rem;
 }
-
-.premium-table {
-  width: 100%;
-  border-collapse: collapse;
-  min-width: 700px;
-}
-
-.premium-table thead {
-  background: var(--table-header-bg);
-}
-
+.premium-table { width: 100%; border-collapse: collapse; min-width: 700px; }
+.premium-table thead { background: var(--table-header-bg); }
 .premium-table thead th {
-  padding: 0.8rem;
-  color: #ffffff;
-  font-weight: 500;
-  font-size: 0.7rem;
-  text-transform: uppercase;
+  padding: 0.85rem; color: #ffffff;
+  font-weight: 600; font-size: 0.7rem;
+  text-transform: uppercase; letter-spacing: 0.5px;
+  text-align: left;
 }
-
-.premium-table tbody tr {
-  border-bottom: 1px solid var(--border-color);
-}
-
-.premium-table tbody tr:hover {
-  background: rgba(13, 71, 161, 0.05);
-}
-
-.premium-table td {
-  padding: 0.8rem;
-  color: var(--text-secondary);
-  font-size: 0.75rem;
-}
-
+.premium-table tbody tr { border-bottom: 1px solid var(--border-color); transition: background 0.2s ease; }
+.premium-table tbody tr:hover { background: rgba(11, 94, 215, 0.04); }
+.premium-table td { padding: 0.85rem; color: var(--text-secondary); font-size: 0.78rem; }
 .state-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 3px 8px;
-  border-radius: 40px;
-  font-size: 0.7rem;
-  font-weight: 500;
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 3px 8px; border-radius: 40px;
+  font-size: 0.7rem; font-weight: 600;
 }
-
 .badge-norte { background: #ffecb3; color: #ff6f00; }
 .badge-nordeste { background: #ffcdd2; color: #c62828; }
 .badge-centro-oeste { background: #c8e6c9; color: #2e7d32; }
-.badge-sudeste { background: #bbdefb; color: #0d47a1; }
+.badge-sudeste { background: #bbdefb; color: #0b5ed7; }
 .badge-sul { background: #e1bee7; color: #4a148c; }
-
 body.dark-theme .badge-norte { background: #4a3000; color: #ffecb3; }
 body.dark-theme .badge-nordeste { background: #4a1010; color: #ffcdd2; }
 body.dark-theme .badge-centro-oeste { background: #1a3a1a; color: #c8e6c9; }
 body.dark-theme .badge-sudeste { background: #0a2a4a; color: #bbdefb; }
 body.dark-theme .badge-sul { background: #2a1a3a; color: #e1bee7; }
-
 .value-positive { color: var(--success); font-weight: 600; }
 .value-highlight { font-weight: 700; color: var(--primary); }
 
+/* ==================== ALERTS ==================== */
 .alert {
-  padding: 0.7rem 1rem;
+  padding: 0.8rem 1rem;
   border-radius: 10px;
   margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  display: flex; align-items: center; gap: 8px;
   border-left: 4px solid;
   font-size: 0.8rem;
+  animation: fadeIn 0.3s ease;
 }
-
-.alert-success {
-  background: #e8f5e9;
-  color: #1b5e20;
-  border-left-color: #2e7d32;
-}
-
-.alert-error {
-  background: #ffebee;
-  color: #b71c1c;
-  border-left-color: #c62828;
-}
-
-.alert-info {
-  background: #e3f2fd;
-  color: #0d47a1;
-  border-left-color: #1976d2;
-}
-
-.alert-warning {
-  background: #fff3e0;
-  color: #e65100;
-  border-left-color: #f57c00;
-}
-
+.alert-success { background: #e8f5e9; color: #1b5e20; border-left-color: #2e7d32; }
+.alert-error { background: #ffebee; color: #b71c1c; border-left-color: #c62828; }
+.alert-info { background: #e3f2fd; color: #0d47a1; border-left-color: #0b5ed7; }
+.alert-warning { background: #fff3e0; color: #e65100; border-left-color: #f57c00; }
 body.dark-theme .alert-success,
 body.dark-theme .alert-error,
 body.dark-theme .alert-info,
-body.dark-theme .alert-warning {
-  background: #2a2a3e;
-  color: #e0e0e0;
-}
+body.dark-theme .alert-warning { background: #1e2a3f; color: #e6edf7; }
 
-.login-wrapper {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--bg-body);
-  position: relative;
-  overflow: hidden;
-  padding: 1rem;
-}
-
-.login-wrapper::before {
-  content: '';
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  background: rgba(255, 255, 255, 0.03);
-  transform: rotate(45deg);
-  top: -50%;
-  left: -50%;
-  animation: rotate 20s linear infinite;
-}
-
-@keyframes rotate {
-  from { transform: rotate(45deg); }
-  to { transform: rotate(405deg); }
-}
-
-.login-card {
-  background: var(--bg-card);
-  border-radius: 24px;
-  padding: 2rem;
-  width: 100%;
-  max-width: 400px;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
-  animation: fadeInUp 0.5s ease;
-  position: relative;
-  z-index: 1;
-  border: 1px solid var(--border-color);
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.login-logo {
-  text-align: center;
+/* ==================== BACKUP TAB ==================== */
+.backup-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
   margin-bottom: 1.5rem;
 }
+.backup-stat {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 1.3rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.backup-stat:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+.backup-stat::before {
+  content: '';
+  position: absolute; top: 0; left: 0;
+  width: 4px; height: 100%;
+  background: linear-gradient(180deg, var(--primary), var(--accent));
+}
+.backup-stat-icon {
+  width: 46px; height: 46px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 6px 18px rgba(11, 94, 215, 0.3);
+}
+.backup-stat-icon.green { background: linear-gradient(135deg, #2e7d32, #1b5e20); box-shadow: 0 6px 18px rgba(46,125,50,0.3); }
+.backup-stat-icon.orange { background: linear-gradient(135deg, #f57c00, #e65100); box-shadow: 0 6px 18px rgba(245,124,0,0.3); }
+.backup-stat-icon.pink { background: linear-gradient(135deg, #e91e63, #c2185b); box-shadow: 0 6px 18px rgba(233,30,99,0.3); }
+.backup-stat-label {
+  color: var(--text-muted); font-size: 0.7rem;
+  font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.5px; margin-bottom: 4px;
+}
+.backup-stat-value {
+  color: var(--text-primary); font-size: 1.3rem;
+  font-weight: 700; word-break: break-word;
+}
+.backup-stat-sub { color: var(--text-muted); font-size: 0.68rem; margin-top: 2px; }
 
-.login-logo .logo-circle {
-  width: 70px;
-  height: 70px;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  border-radius: 18px;
+.backup-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.backup-action-card {
+  background: var(--bg-card);
+  border-radius: 20px;
+  padding: 1.8rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+.backup-action-card:hover { box-shadow: var(--shadow-hover); }
+.backup-action-card h3 {
+  color: var(--text-primary);
+  font-size: 1.1rem; font-weight: 700;
+  margin-bottom: 0.6rem;
+  display: flex; align-items: center; gap: 10px;
+}
+.backup-action-card h3 i {
+  background: rgba(11, 94, 215, 0.1);
+  color: var(--primary);
+  padding: 10px; border-radius: 12px;
+  font-size: 1rem;
+  width: 42px; height: 42px;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.backup-action-card p {
+  color: var(--text-secondary);
+  font-size: 0.82rem; line-height: 1.5;
+  margin-bottom: 1.2rem;
+}
+
+.file-drop-zone {
+  border: 2px dashed var(--border-color);
+  border-radius: 14px;
+  padding: 2rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(11, 94, 215, 0.02);
+  margin-bottom: 1rem;
+}
+.file-drop-zone:hover,
+.file-drop-zone.dragover {
+  border-color: var(--primary);
+  background: rgba(11, 94, 215, 0.06);
+}
+.file-drop-zone i {
+  font-size: 2.2rem; color: var(--primary);
+  margin-bottom: 0.6rem; display: block;
+}
+.file-drop-zone strong {
+  display: block; color: var(--text-primary);
+  font-size: 0.9rem; margin-bottom: 4px;
+}
+.file-drop-zone small { color: var(--text-muted); font-size: 0.72rem; }
+
+.backup-danger-zone {
+  background: rgba(198, 40, 40, 0.06);
+  border: 1px solid rgba(198, 40, 40, 0.2);
+  border-radius: 16px;
+  padding: 1.4rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin: 0 auto 1rem;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
-
-.login-logo .logo-circle i {
-  font-size: 2.5rem;
-  color: #ffffff;
+.backup-danger-zone .danger-text h4 {
+  color: var(--secondary);
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+  display: flex; align-items: center; gap: 8px;
 }
-
-.login-logo h2 {
-  color: var(--text-primary);
-  font-size: 1.4rem;
-  margin-bottom: 0.3rem;
-}
-
-.login-logo p {
+.backup-danger-zone .danger-text p {
   color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+.backup-info-box {
+  background: rgba(11, 94, 215, 0.06);
+  border-left: 4px solid var(--primary);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  margin-top: 1.2rem;
+}
+.backup-info-box h4 {
+  color: var(--primary);
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  display: flex; align-items: center; gap: 8px;
+}
+.backup-info-box ul {
+  list-style: none;
+  padding: 0;
+}
+.backup-info-box li {
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  padding: 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.backup-info-box li i {
+  color: var(--success);
+  font-size: 0.7rem;
+}
+
+/* ==================== LOGIN (VERSÃO COMPACTA) ==================== */
+.login-wrapper {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--login-bg);
+  position: relative; overflow: hidden;
+  padding: 0.5rem;
+  transition: background 0.4s ease;
+}
+.login-wrapper::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(circle at 15% 80%, var(--login-glow) 0%, transparent 45%),
+    radial-gradient(circle at 85% 20%, var(--login-glow) 0%, transparent 40%),
+    repeating-linear-gradient(90deg, rgba(127,127,127,0.04) 0 1px, transparent 1px 40px),
+    repeating-linear-gradient(0deg, rgba(127,127,127,0.04) 0 1px, transparent 1px 40px);
+  pointer-events: none;
+  transition: background-image 0.4s ease;
+}
+.login-wrapper::after {
+  content: '';
+  position: absolute;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, var(--login-glow), transparent 70%);
+  border-radius: 50%;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulseGlow 6s ease-in-out infinite;
+  pointer-events: none;
+  transition: background 0.4s ease;
+}
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.9; transform: translate(-50%, -50%) scale(1.1); }
+}
+.login-card {
+  background: var(--login-card-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--login-card-border);
+  border-radius: 20px;
+  padding: 1.6rem 1.5rem;
+  width: 100%; max-width: 360px;
+  box-shadow: var(--login-card-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  animation: fadeInUp 0.6s ease;
+  position: relative; z-index: 3;
+  color: var(--login-text);
+  transition: background 0.4s ease, border 0.4s ease, box-shadow 0.4s ease;
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.login-logo { text-align: center; margin-bottom: 1.2rem; }
+.login-logo .logo-circle {
+  width: 64px; height: 64px;
+  background: var(--login-logo-gradient);
+  border-radius: 18px;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 0.8rem;
+  box-shadow: 0 10px 40px rgba(0, 180, 255, 0.4);
+  animation: floatLogo 3s ease-in-out infinite;
+  padding: 10px;
+}
+@keyframes floatLogo {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.login-logo h2 {
+  color: var(--login-title);
+  font-size: 1.15rem; font-weight: 800;
+  margin-bottom: 0.2rem;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+.login-logo h2 span { color: var(--login-title-accent); display: block; font-size: 1.35rem; }
+.login-logo p {
+  color: var(--login-text-soft);
+  font-size: 0.7rem; letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.login-card .input-group label { color: var(--login-text); opacity: 0.85; }
+.login-card .input-group label i { color: var(--login-title-accent); }
+.login-card .input-wrapper input {
+  background: var(--login-input-bg);
+  border: 2px solid var(--login-input-border);
+  color: var(--login-input-text);
+  padding: 9px 10px 9px 36px;
   font-size: 0.8rem;
 }
+.login-card .input-wrapper input::placeholder { color: var(--login-input-placeholder); }
+.login-card .input-wrapper input:focus {
+  border-color: var(--login-title-accent);
+  background: var(--login-input-focus-bg);
+  box-shadow: 0 0 0 4px var(--login-glow);
+}
+.login-card .input-wrapper i { color: var(--login-input-icon); }
+.login-card .theme-toggle {
+  background: var(--login-toggle-bg);
+  border-color: var(--login-toggle-border);
+}
+.login-card .theme-toggle-btn { color: var(--login-toggle-icon); }
+.login-card .theme-toggle-btn.active {
+  background: var(--login-toggle-active-bg);
+  color: var(--login-toggle-active-icon);
+  box-shadow: 0 4px 12px var(--login-glow);
+}
+.login-card .btn-primary {
+  padding: 10px 20px;
+  font-size: 0.8rem;
+}
+.login-footer {
+  text-align: center;
+  color: var(--login-text-soft);
+  font-size: 0.6rem;
+  margin-top: 1rem;
+  letter-spacing: 0.5px;
+}
+.login-footer i { color: var(--login-title-accent); margin-right: 4px; }
 
+/* ==================== FOOTER ==================== */
 .copyright-footer {
   background: var(--bg-header);
-  padding: 0.8rem;
-  text-align: center;
-  border-top: 3px solid var(--secondary);
+  padding: 1rem; text-align: center;
+  border-top: 3px solid var(--primary);
   margin-top: 1.5rem;
 }
-
 .copyright-content {
-  max-width: 1440px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+  max-width: 1440px; margin: 0 auto;
+  display: flex; justify-content: space-between;
   align-items: center;
   padding: 0 1.5rem;
   color: var(--text-muted);
-  font-size: 0.7rem;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  font-size: 0.72rem;
+  flex-wrap: wrap; gap: 0.5rem;
 }
+.copyright-content .brand { color: var(--primary); font-weight: 700; }
+.copyright-content .ceo { color: var(--secondary); font-weight: 600; }
 
-.copyright-content .brand {
-  color: var(--primary);
-  font-weight: 700;
-}
-
-.copyright-content .ceo {
-  color: var(--secondary);
-  font-weight: 600;
-}
-
+/* ==================== RESPONSIVE ==================== */
 @media (max-width: 1024px) {
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .result-content { grid-template-columns: repeat(2, 1fr); }
+  .nfe-section { grid-template-columns: 1fr; }
+  .backup-grid { grid-template-columns: repeat(2, 1fr); }
+  .backup-actions { grid-template-columns: 1fr; }
 }
-
 @media (max-width: 768px) {
   .header-container { flex-direction: column; text-align: center; }
   .stats-grid { grid-template-columns: 1fr; }
   .result-content { grid-template-columns: 1fr; }
   .copyright-content { flex-direction: column; text-align: center; }
   .app-wrapper { padding: 0 1rem; }
-  .login-card { margin: 1rem; padding: 1.5rem; }
+  .login-card { margin: 1rem; padding: 1.6rem 1.5rem; max-width: 100%; }
   .pro-grid { grid-template-columns: 1fr; }
   .card-header { flex-direction: column; align-items: flex-start; }
+  .hero-content { flex-direction: column; text-align: center; }
+  .hero-titles h1 { font-size: 1.4rem; }
+  .hero-titles h1 span { font-size: 1.7rem; }
+  .hero-brand { flex-direction: column; }
+  .backup-grid { grid-template-columns: 1fr; }
+  .tabs-nav { flex-direction: column; }
+  .tab-btn { min-width: auto; }
 }
-
 @media (max-width: 480px) {
   .corporate-card { padding: 1rem; }
   .stat-item { padding: 1rem; }
-  .stat-icon { width: 45px; height: 45px; }
-  .stat-icon i { font-size: 1.4rem; }
-  .stat-value { font-size: 1.2rem; }
-  .btn { padding: 8px 16px; font-size: 0.75rem; }
+  .btn { padding: 9px 16px; font-size: 0.75rem; }
+  .nfe-visual { padding: 1.5rem; }
+  .backup-action-card { padding: 1.2rem; }
 }
-
 .hidden { display: none !important; }
 .text-center { text-align: center; }
-.mt-2 { margin-top: 0.8rem; }
 .w-100 { width: 100%; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal, .reveal-left, .reveal-right { opacity: 1 !important; transform: none !important; }
+}
 </style>
 </head>
 <body>
 
+<!-- ==================== TELA DE LOGIN (COMPACTA) ==================== -->
 <div id="login" class="login-wrapper">
   <div class="login-card">
     <div class="login-logo">
-      <div class="logo-circle"><i class="fas fa-crown"></i></div>
-      <h2>ERP DIFAL PRO 2026</h2>
-      <p>Sistema profissional de gestão tributária</p>
+      <div class="logo-circle">
+        <svg class="gsf-cube" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <polygon class="cube-top" points="50,10 90,30 50,50 10,30"/>
+          <polygon class="cube-left" points="10,30 50,50 50,90 10,70"/>
+          <polygon class="cube-right" points="90,30 50,50 50,90 90,70"/>
+          <line class="cube-line" x1="30,40" x2="30,80"/>
+          <line class="cube-line" x1="50,50" x2="50,90"/>
+          <line class="cube-line" x1="70,40" x2="70,80"/>
+          <line class="cube-line" x1="10,50" x2="50,70"/>
+          <line class="cube-line" x1="50,70" x2="90,50"/>
+          <line class="cube-line" x1="10,60" x2="50,80"/>
+          <line class="cube-line" x1="50,80" x2="90,60"/>
+        </svg>
+      </div>
+      <h2>SISTEMA <span>FISCAL</span></h2>
+      <p>ERP DIFAL PRO 2026</p>
       <div class="year-badge" style="display: inline-block; margin-top: 8px;">ANO BASE 2026</div>
     </div>
     
-    <div style="display: flex; justify-content: center; margin-bottom: 1.5rem;">
+    <div style="display: flex; justify-content: center; margin-bottom: 1.2rem;">
       <div class="theme-toggle">
         <button class="theme-toggle-btn" onclick="setTheme('light')" title="Tema Claro"><i class="fas fa-sun"></i></button>
         <button class="theme-toggle-btn" onclick="setTheme('dark')" title="Tema Escuro"><i class="fas fa-moon"></i></button>
@@ -955,32 +1134,42 @@ body.dark-theme .alert-warning {
       <i class="fas fa-sign-in-alt"></i> Acessar Sistema
     </button>
     
-    <div class="text-center mt-2" style="color: var(--text-muted); font-size: 0.65rem; margin-top: 1rem;">
-      <i class="fas fa-copyright"></i> Raven Tech Solutions - 2026 | v3.2.0
+    <div class="login-footer">
+      <i class="fas fa-cube"></i> GSF Fiscal | Raven Tech Solutions 2026 | <span class="app-version">v3.6.0</span>
     </div>
   </div>
 </div>
 
+<!-- ==================== SISTEMA ==================== -->
 <div id="sistema" class="hidden">
 
   <header class="corporate-header">
     <div class="header-container">
       <div class="logo-container">
-        <div class="logo-icon"><i class="fas fa-crown"></i></div>
+        <div class="logo-icon">
+          <svg class="gsf-cube" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon class="cube-top" points="50,10 90,30 50,50 10,30"/>
+            <polygon class="cube-left" points="10,30 50,50 50,90 10,70"/>
+            <polygon class="cube-right" points="90,30 50,50 50,90 90,70"/>
+            <line class="cube-line" x1="30,40" x2="30,80"/>
+            <line class="cube-line" x1="50,50" x2="50,90"/>
+            <line class="cube-line" x1="70,40" x2="70,80"/>
+          </svg>
+        </div>
         <div class="logo-text">
-          <h1>ERP DIFAL PRO 2026 <span class="year-badge">ANO BASE 2026</span></h1>
+          <h1>ERP DIFAL PRO 2026 <span class="year-badge">2026</span></h1>
           <span class="brand">Raven Tech Solutions</span>
         </div>
       </div>
       
       <div class="user-menu">
-        <div class="theme-toggle">
+        <div class="theme-toggle" id="mainThemeToggle">
           <button class="theme-toggle-btn" onclick="setTheme('light')" title="Tema Claro"><i class="fas fa-sun"></i></button>
           <button class="theme-toggle-btn" onclick="setTheme('dark')" title="Tema Escuro"><i class="fas fa-moon"></i></button>
         </div>
         
         <div class="user-profile" id="userProfileBtn">
-          <div class="user-avatar" id="userAvatar">CN</div>
+          <div class="user-avatar" id="userAvatar">DA</div>
           <div class="user-info">
             <span class="user-name" id="userName">Carregando...</span>
             <span class="user-role" id="userRole">Carregando...</span>
@@ -992,6 +1181,35 @@ body.dark-theme .alert-warning {
     </div>
   </header>
 
+  <!-- HERO -->
+  <div class="hero-section reveal">
+    <div class="hero-content">
+      <div class="hero-brand">
+        <div class="hero-logo-cube">
+          <svg class="gsf-cube" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon class="cube-top" points="50,10 90,30 50,50 10,30"/>
+            <polygon class="cube-left" points="10,30 50,50 50,90 10,70"/>
+            <polygon class="cube-right" points="90,30 50,50 50,90 90,70"/>
+            <line class="cube-line" x1="30,40" x2="30,80"/>
+            <line class="cube-line" x1="50,50" x2="50,90"/>
+            <line class="cube-line" x1="70,40" x2="70,80"/>
+            <line class="cube-line" x1="10,50" x2="50,70"/>
+            <line class="cube-line" x1="50,70" x2="90,50"/>
+          </svg>
+        </div>
+        <div class="hero-titles">
+          <h1>SISTEMA <span>FISCAL</span></h1>
+          <div class="hero-brand-sub"><i class="fas fa-shield-alt"></i> GSF FISCAL · RAVEN TECH</div>
+          <div class="hero-badges">
+            <span class="hero-badge gold"><i class="fas fa-crown"></i> ERP DIFAL PRO 2026</span>
+            <span class="hero-badge"><i class="fas fa-check-circle"></i> Convênio ICMS 236/21</span>
+            <span class="hero-badge"><i class="fas fa-bolt"></i> <span class="app-version">v3.6.0</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="app-wrapper">
 
     <div id="accessAlert" class="alert alert-info hidden">
@@ -999,238 +1217,439 @@ body.dark-theme .alert-warning {
       <span id="accessAlertMessage"></span>
     </div>
 
-    <div class="stats-grid">
-      <div class="stat-item">
-        <div class="stat-icon"><i class="fas fa-calculator"></i></div>
-        <div class="stat-content">
-          <h4>Total de Cálculos</h4>
-          <div class="stat-value" id="totalCalculos">0</div>
-          <div class="stat-label">operações realizadas</div>
-        </div>
-      </div>
-      
-      <div class="stat-item">
-        <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
-        <div class="stat-content">
-          <h4>Valor Total</h4>
-          <div class="stat-value" id="valorTotal">R$ 0</div>
-          <div class="stat-label">DIFAL + FCP</div>
-        </div>
-      </div>
-      
-      <div class="stat-item">
-        <div class="stat-icon"><i class="fas fa-clock"></i></div>
-        <div class="stat-content">
-          <h4>Último Cálculo</h4>
-          <div class="stat-value" id="ultimoCalculo">-</div>
-          <div class="stat-label">data e hora</div>
-        </div>
-      </div>
-      
-      <div class="stat-item">
-        <div class="stat-icon"><i class="fas fa-map-marked-alt"></i></div>
-        <div class="stat-content">
-          <h4>Estados</h4>
-          <div class="stat-value">27</div>
-          <div class="stat-label">todos os UFs</div>
-        </div>
-      </div>
+    <!-- TABS NAV -->
+    <div class="tabs-nav">
+      <button class="tab-btn active" data-tab="principal" onclick="switchTab('principal')">
+        <i class="fas fa-home"></i> Principal
+      </button>
+      <button class="tab-btn" data-tab="backup" onclick="switchTab('backup')">
+        <i class="fas fa-database"></i> Backup
+      </button>
     </div>
 
-    <div class="corporate-card">
-      <div class="card-header">
-        <div class="card-title">
-          <i class="fas fa-calculator"></i>
-          <h3>Calculadora DIFAL 2026</h3>
-        </div>
-        <div class="card-badge"><i class="fas fa-check-circle"></i> v3.2 - 2026</div>
-      </div>
-      
-      <div class="pro-grid">
-        <div class="input-group">
-          <label><i class="fas fa-dollar-sign"></i> Valor da Operação (R$)</label>
-          <div class="input-wrapper">
-            <i class="fas fa-dollar-sign"></i>
-            <input type="number" id="valor" placeholder="0,00" step="0.01" min="0" value="1500.00">
-          </div>
-        </div>
-        
-        <div class="input-group">
-          <label><i class="fas fa-barcode"></i> Código NCM</label>
-          <div class="input-wrapper">
-            <i class="fas fa-barcode"></i>
-            <input type="text" id="ncm" placeholder="0000.00.00" value="8471.30">
-          </div>
-        </div>
-      </div>
-      
-      <div class="pro-grid">
-        <div class="input-group">
-          <label><i class="fas fa-map-marker-alt"></i> Estado de Origem</label>
-          <div class="input-wrapper">
-            <i class="fas fa-map-marker-alt"></i>
-            <select id="origem">
-              <option value="AC">Acre (AC)</option><option value="AL">Alagoas (AL)</option>
-              <option value="AP">Amapá (AP)</option><option value="AM">Amazonas (AM)</option>
-              <option value="BA">Bahia (BA)</option><option value="CE">Ceará (CE)</option>
-              <option value="DF">Distrito Federal (DF)</option><option value="ES">Espírito Santo (ES)</option>
-              <option value="GO">Goiás (GO)</option><option value="MA">Maranhão (MA)</option>
-              <option value="MT">Mato Grosso (MT)</option><option value="MS">Mato Grosso do Sul (MS)</option>
-              <option value="MG">Minas Gerais (MG)</option><option value="PA">Pará (PA)</option>
-              <option value="PB">Paraíba (PB)</option><option value="PR">Paraná (PR)</option>
-              <option value="PE">Pernambuco (PE)</option><option value="PI">Piauí (PI)</option>
-              <option value="RJ">Rio de Janeiro (RJ)</option><option value="RN">Rio Grande do Norte (RN)</option>
-              <option value="RS">Rio Grande do Sul (RS)</option><option value="RO">Rondônia (RO)</option>
-              <option value="RR">Roraima (RR)</option><option value="SC">Santa Catarina (SC)</option>
-              <option value="SP" selected>São Paulo (SP)</option><option value="SE">Sergipe (SE)</option>
-              <option value="TO">Tocantins (TO)</option>
-            </select>
-          </div>
-        </div>
-        
-        <div class="input-group">
-          <label><i class="fas fa-map-marker-alt"></i> Estado de Destino</label>
-          <div class="input-wrapper">
-            <i class="fas fa-map-marker-alt"></i>
-            <select id="destino">
-              <option value="AC">Acre (AC)</option><option value="AL">Alagoas (AL)</option>
-              <option value="AP">Amapá (AP)</option><option value="AM">Amazonas (AM)</option>
-              <option value="BA" selected>Bahia (BA)</option><option value="CE">Ceará (CE)</option>
-              <option value="DF">Distrito Federal (DF)</option><option value="ES">Espírito Santo (ES)</option>
-              <option value="GO">Goiás (GO)</option><option value="MA">Maranhão (MA)</option>
-              <option value="MT">Mato Grosso (MT)</option><option value="MS">Mato Grosso do Sul (MS)</option>
-              <option value="MG">Minas Gerais (MG)</option><option value="PA">Pará (PA)</option>
-              <option value="PB">Paraíba (PB)</option><option value="PR">Paraná (PR)</option>
-              <option value="PE">Pernambuco (PE)</option><option value="PI">Piauí (PI)</option>
-              <option value="RJ">Rio de Janeiro (RJ)</option><option value="RN">Rio Grande do Norte (RN)</option>
-              <option value="RS">Rio Grande do Sul (RS)</option><option value="RO">Rondônia (RO)</option>
-              <option value="RR">Roraima (RR)</option><option value="SC">Santa Catarina (SC)</option>
-              <option value="SP">São Paulo (SP)</option><option value="SE">Sergipe (SE)</option>
-              <option value="TO">Tocantins (TO)</option>
-            </select>
-          </div>
-        </div>
-      </div>
-      
-      <div class="pro-grid">
-        <div class="input-group">
-          <label><i class="fas fa-chart-pie"></i> Tipo de Cálculo</label>
-          <div class="radio-group">
-            <label><input type="radio" name="tipoCalculo" value="fora" checked> Cálculo por Fora</label>
-            <label><input type="radio" name="tipoCalculo" value="dentro"> Cálculo por Dentro</label>
-          </div>
-        </div>
-        
-        <div class="input-group">
-          <label><i class="fas fa-percent"></i> Base Legal</label>
-          <div class="input-wrapper">
-            <i class="fas fa-gavel"></i>
-            <select id="baseLegal">
-              <option value="normal">Normal - Lei Complementar 87/96</option>
-              <option value="difal2026">DIFAL 2026 - Convênio ICMS 236/21</option>
-              <option value="simples">Simples Nacional - Lei Complementar 123</option>
-            </select>
-          </div>
-        </div>
-      </div>
-      
-      <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
-        <button class="btn btn-primary" onclick="calcular()"><i class="fas fa-calculator"></i> Calcular</button>
-        <button class="btn btn-outline" onclick="preencherExemplo()"><i class="fas fa-flask"></i> Exemplo</button>
-        <button class="btn btn-outline" onclick="mostrarTabelaAliquotas()"><i class="fas fa-table"></i> Tabela</button>
-      </div>
-      
-      <div id="resultado" class="result-panel hidden"></div>
-    </div>
+    <!-- ==================== TAB PRINCIPAL ==================== -->
+    <div class="tab-pane active" id="tab-principal">
 
-    <div class="pro-grid">
-      <div class="corporate-card">
+      <!-- INFO CARDS NF-e -->
+      <div class="nfe-section">
+        <div class="nfe-visual reveal-left">
+          <div class="nfe-visual-content">
+            <h2>NF-e Modelo 55<span>O Padrão Corporativo</span></h2>
+            <p>A Nota Fiscal Eletrônica é o documento fiscal digital que substituiu o papel, garantindo validade jurídica e integração com a SEFAZ para operações B2B e interestaduais.</p>
+          </div>
+          <div class="nfe-visual-footer">
+            <div class="brand-icon">
+              <svg class="gsf-cube" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <polygon class="cube-top" points="50,10 90,30 50,50 10,30"/>
+                <polygon class="cube-left" points="10,30 50,50 50,90 10,70"/>
+                <polygon class="cube-right" points="90,30 50,50 50,90 90,70"/>
+                <line class="cube-line" x1="30,40" x2="30,80"/>
+                <line class="cube-line" x1="50,50" x2="50,90"/>
+                <line class="cube-line" x1="70,40" x2="70,80"/>
+              </svg>
+            </div>
+            <div class="brand-text">GSF Fiscal · Sistema</div>
+          </div>
+        </div>
+        <div class="nfe-features">
+          <div class="nfe-feature reveal-right" data-delay="1">
+            <div class="nfe-feature-icon blue"><i class="fas fa-handshake"></i></div>
+            <div class="nfe-feature-text">
+              <h4>Foco B2B</h4>
+              <p>Criada para operações entre empresas, vendas governamentais, exportações e operações interestaduais.</p>
+            </div>
+          </div>
+          <div class="nfe-feature reveal-right" data-delay="2">
+            <div class="nfe-feature-icon cyan"><i class="fas fa-truck"></i></div>
+            <div class="nfe-feature-text">
+              <h4>Logística Complexa</h4>
+              <p>Registra transferências, devoluções e remessas para industrialização de forma estruturada.</p>
+            </div>
+          </div>
+          <div class="nfe-feature reveal-right" data-delay="3">
+            <div class="nfe-feature-icon pink"><i class="fas fa-file-code"></i></div>
+            <div class="nfe-feature-text">
+              <h4>Substituição do Papel</h4>
+              <p>Eliminou o papel, passando a existir exclusivamente no formato eletrônico (XML).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FLUXO NF-e -->
+      <div class="nfe-flow reveal">
+        <div class="nfe-flow-item"><i class="fas fa-file-code" style="color:#e91e63;"></i> Geração (XML)</div>
+        <i class="fas fa-arrow-right nfe-flow-arrow"></i>
+        <div class="nfe-flow-item"><i class="fas fa-server" style="color:#0b5ed7;"></i> Validação SEFAZ</div>
+        <i class="fas fa-arrow-right nfe-flow-arrow"></i>
+        <div class="nfe-flow-item"><i class="fas fa-shield-alt" style="color:#2e7d32;"></i> Documento Oficial</div>
+      </div>
+
+      <!-- STATS -->
+      <div class="stats-grid" style="margin-top:1.5rem;">
+        <div class="stat-item reveal" data-delay="1">
+          <div class="stat-icon"><i class="fas fa-calculator"></i></div>
+          <div class="stat-content">
+            <h4>Total de Cálculos</h4>
+            <div class="stat-value" id="totalCalculos">0</div>
+            <div class="stat-label">operações realizadas</div>
+          </div>
+        </div>
+        <div class="stat-item reveal" data-delay="2">
+          <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+          <div class="stat-content">
+            <h4>Valor Total</h4>
+            <div class="stat-value" id="valorTotal">R$ 0</div>
+            <div class="stat-label">DIFAL + FCP</div>
+          </div>
+        </div>
+        <div class="stat-item reveal" data-delay="3">
+          <div class="stat-icon"><i class="fas fa-clock"></i></div>
+          <div class="stat-content">
+            <h4>Último Cálculo</h4>
+            <div class="stat-value" id="ultimoCalculo" style="font-size:0.85rem;">-</div>
+            <div class="stat-label">data e hora</div>
+          </div>
+        </div>
+        <div class="stat-item reveal" data-delay="4">
+          <div class="stat-icon"><i class="fas fa-map-marked-alt"></i></div>
+          <div class="stat-content">
+            <h4>Estados</h4>
+            <div class="stat-value">27</div>
+            <div class="stat-label">todos os UFs</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CALCULADORA -->
+      <div class="corporate-card reveal">
         <div class="card-header">
-          <div class="card-title"><i class="fas fa-filter"></i><h3>Filtro por Período</h3></div>
+          <div class="card-title">
+            <i class="fas fa-calculator"></i>
+            <h3>Calculadora DIFAL 2026</h3>
+          </div>
+          <div class="card-badge"><i class="fas fa-check-circle"></i> <span class="app-version">v3.6</span> - 2026</div>
         </div>
-        <div class="pro-grid" style="grid-template-columns: 1fr 1fr auto;">
-          <div class="input-group"><label>Data Inicial</label><div class="input-wrapper"><i class="fas fa-calendar"></i><input type="date" id="inicio"></div></div>
-          <div class="input-group"><label>Data Final</label><div class="input-wrapper"><i class="fas fa-calendar"></i><input type="date" id="fim"></div></div>
-          <button class="btn btn-primary" style="align-self: flex-end;" onclick="filtrar()"><i class="fas fa-search"></i> Filtrar</button>
+        
+        <div class="pro-grid">
+          <div class="input-group">
+            <label><i class="fas fa-dollar-sign"></i> Valor da Operação (R$)</label>
+            <div class="input-wrapper">
+              <i class="fas fa-dollar-sign"></i>
+              <input type="number" id="valor" placeholder="0,00" step="0.01" min="0" value="1500.00">
+            </div>
+          </div>
+          <div class="input-group">
+            <label><i class="fas fa-barcode"></i> Código NCM</label>
+            <div class="input-wrapper">
+              <i class="fas fa-barcode"></i>
+              <input type="text" id="ncm" placeholder="0000.00.00" value="8471.30">
+            </div>
+          </div>
+        </div>
+        
+        <div class="pro-grid">
+          <div class="input-group">
+            <label><i class="fas fa-map-marker-alt"></i> Estado de Origem</label>
+            <div class="input-wrapper">
+              <i class="fas fa-map-marker-alt"></i>
+              <select id="origem">
+                <option value="AC">Acre (AC)</option><option value="AL">Alagoas (AL)</option>
+                <option value="AP">Amapá (AP)</option><option value="AM">Amazonas (AM)</option>
+                <option value="BA">Bahia (BA)</option><option value="CE">Ceará (CE)</option>
+                <option value="DF">Distrito Federal (DF)</option><option value="ES">Espírito Santo (ES)</option>
+                <option value="GO">Goiás (GO)</option><option value="MA">Maranhão (MA)</option>
+                <option value="MT">Mato Grosso (MT)</option><option value="MS">Mato Grosso do Sul (MS)</option>
+                <option value="MG">Minas Gerais (MG)</option><option value="PA">Pará (PA)</option>
+                <option value="PB">Paraíba (PB)</option><option value="PR">Paraná (PR)</option>
+                <option value="PE">Pernambuco (PE)</option><option value="PI">Piauí (PI)</option>
+                <option value="RJ">Rio de Janeiro (RJ)</option><option value="RN">Rio Grande do Norte (RN)</option>
+                <option value="RS">Rio Grande do Sul (RS)</option><option value="RO">Rondônia (RO)</option>
+                <option value="RR">Roraima (RR)</option><option value="SC">Santa Catarina (SC)</option>
+                <option value="SP" selected>São Paulo (SP)</option><option value="SE">Sergipe (SE)</option>
+                <option value="TO">Tocantins (TO)</option>
+              </select>
+            </div>
+          </div>
+          <div class="input-group">
+            <label><i class="fas fa-map-marker-alt"></i> Estado de Destino</label>
+            <div class="input-wrapper">
+              <i class="fas fa-map-marker-alt"></i>
+              <select id="destino">
+                <option value="AC">Acre (AC)</option><option value="AL">Alagoas (AL)</option>
+                <option value="AP">Amapá (AP)</option><option value="AM">Amazonas (AM)</option>
+                <option value="BA" selected>Bahia (BA)</option><option value="CE">Ceará (CE)</option>
+                <option value="DF">Distrito Federal (DF)</option><option value="ES">Espírito Santo (ES)</option>
+                <option value="GO">Goiás (GO)</option><option value="MA">Maranhão (MA)</option>
+                <option value="MT">Mato Grosso (MT)</option><option value="MS">Mato Grosso do Sul (MS)</option>
+                <option value="MG">Minas Gerais (MG)</option><option value="PA">Pará (PA)</option>
+                <option value="PB">Paraíba (PB)</option><option value="PR">Paraná (PR)</option>
+                <option value="PE">Pernambuco (PE)</option><option value="PI">Piauí (PI)</option>
+                <option value="RJ">Rio de Janeiro (RJ)</option><option value="RN">Rio Grande do Norte (RN)</option>
+                <option value="RS">Rio Grande do Sul (RS)</option><option value="RO">Rondônia (RO)</option>
+                <option value="RR">Roraima (RR)</option><option value="SC">Santa Catarina (SC)</option>
+                <option value="SP">São Paulo (SP)</option><option value="SE">Sergipe (SE)</option>
+                <option value="TO">Tocantins (TO)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        
+        <div class="pro-grid">
+          <div class="input-group">
+            <label><i class="fas fa-chart-pie"></i> Tipo de Cálculo</label>
+            <div class="radio-group">
+              <label><input type="radio" name="tipoCalculo" value="fora" checked> Cálculo por Fora</label>
+              <label><input type="radio" name="tipoCalculo" value="dentro"> Cálculo por Dentro</label>
+            </div>
+          </div>
+          <div class="input-group">
+            <label><i class="fas fa-percent"></i> Base Legal</label>
+            <div class="input-wrapper">
+              <i class="fas fa-gavel"></i>
+              <select id="baseLegal">
+                <option value="normal">Normal - Lei Complementar 87/96</option>
+                <option value="difal2026">DIFAL 2026 - Convênio ICMS 236/21</option>
+                <option value="simples">Simples Nacional - Lei Complementar 123</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        
+        <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+          <button class="btn btn-primary" onclick="calcular()"><i class="fas fa-calculator"></i> Calcular</button>
+          <button class="btn btn-outline" onclick="preencherExemplo()"><i class="fas fa-flask"></i> Exemplo</button>
+          <button class="btn btn-outline" onclick="mostrarTabelaAliquotas()"><i class="fas fa-table"></i> Tabela</button>
+        </div>
+        
+        <div id="resultado" class="result-panel hidden"></div>
+      </div>
+
+      <div class="pro-grid">
+        <div class="corporate-card reveal-left">
+          <div class="card-header">
+            <div class="card-title"><i class="fas fa-filter"></i><h3>Filtro por Período</h3></div>
+          </div>
+          <div class="pro-grid" style="grid-template-columns: 1fr 1fr auto;">
+            <div class="input-group"><label>Data Inicial</label><div class="input-wrapper"><i class="fas fa-calendar"></i><input type="date" id="inicio"></div></div>
+            <div class="input-group"><label>Data Final</label><div class="input-wrapper"><i class="fas fa-calendar"></i><input type="date" id="fim"></div></div>
+            <button class="btn btn-primary" style="align-self: flex-end;" onclick="filtrar()"><i class="fas fa-search"></i> Filtrar</button>
+          </div>
+        </div>
+        
+        <div class="corporate-card reveal-right">
+          <div class="card-header">
+            <div class="card-title"><i class="fas fa-chart-line"></i><h3>Dashboard Mensal 2026</h3></div>
+          </div>
+          <div style="height: 220px;"><canvas id="grafico"></canvas></div>
         </div>
       </div>
-      
-      <div class="corporate-card">
+
+      <div class="corporate-card reveal">
         <div class="card-header">
-          <div class="card-title"><i class="fas fa-chart-line"></i><h3>Dashboard Mensal 2026</h3></div>
+          <div class="card-title"><i class="fas fa-table"></i><h3>Histórico de Operações</h3></div>
+          <div class="card-badge" id="registroCount">0 registros</div>
         </div>
-        <div style="height: 220px;"><canvas id="grafico"></canvas></div>
+        <div class="table-container">
+          <table class="premium-table">
+            <thead><tr><th>Data/Hora</th><th>Valor (R$)</th><th>Origem</th><th>Destino</th><th>DIFAL (R$)</th><th>FCP (R$)</th><th>Total (R$)</th><th>Tipo</th><th>Alíquotas</th></tr></thead>
+            <tbody id="corpo-tabela"><tr><td colspan="9" class="text-center" style="padding: 2rem;"><i class="fas fa-inbox"></i><br>Nenhum registro</td></tr></tbody>
+          </table>
+        </div>
       </div>
+
+      <div class="corporate-card reveal">
+        <div class="card-header">
+          <div class="card-title"><i class="fas fa-download"></i><h3>Exportação de Relatórios</h3></div>
+        </div>
+        <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+          <button class="btn btn-secondary" onclick="exportPDF()"><i class="fas fa-file-pdf"></i> PDF</button>
+          <button class="btn btn-secondary" onclick="exportExcel()"><i class="fas fa-file-excel"></i> Excel</button>
+          <button class="btn btn-outline" onclick="exportJSON()"><i class="fas fa-file-code"></i> JSON</button>
+        </div>
+        <div class="alert alert-info" style="margin-top: 1rem;"><i class="fas fa-info-circle"></i> Alíquotas atualizadas para 2026 (Convênio ICMS 236/21)</div>
+      </div>
+
     </div>
 
-    <div class="corporate-card">
-      <div class="card-header">
-        <div class="card-title"><i class="fas fa-table"></i><h3>Histórico de Operações</h3></div>
-        <div class="card-badge" id="registroCount">0 registros</div>
+    <!-- ==================== TAB BACKUP ==================== -->
+    <div class="tab-pane" id="tab-backup">
+
+      <div class="corporate-card reveal">
+        <div class="card-header">
+          <div class="card-title">
+            <i class="fas fa-database"></i>
+            <h3>Gerenciamento de Backup</h3>
+          </div>
+          <div class="card-badge"><i class="fas fa-shield-alt"></i> Segurança de dados</div>
+        </div>
+        <p style="color:var(--text-secondary); font-size:0.85rem; line-height:1.6; margin-bottom:1.5rem;">
+          Faça backup dos seus dados regularmente para evitar perdas. Você pode exportar todo o histórico para um arquivo JSON e restaurá-lo posteriormente em qualquer dispositivo.
+        </p>
+
+        <!-- BACKUP STATS -->
+        <div class="backup-grid">
+          <div class="backup-stat reveal" data-delay="1">
+            <div class="backup-stat-icon"><i class="fas fa-list-ol"></i></div>
+            <div class="backup-stat-label">Registros</div>
+            <div class="backup-stat-value" id="backupCount">0</div>
+            <div class="backup-stat-sub">no histórico atual</div>
+          </div>
+          <div class="backup-stat reveal" data-delay="2">
+            <div class="backup-stat-icon green"><i class="fas fa-hdd"></i></div>
+            <div class="backup-stat-label">Tamanho</div>
+            <div class="backup-stat-value" id="backupSize">0 KB</div>
+            <div class="backup-stat-sub">dados em disco</div>
+          </div>
+          <div class="backup-stat reveal" data-delay="3">
+            <div class="backup-stat-icon orange"><i class="fas fa-clock"></i></div>
+            <div class="backup-stat-label">Último Backup</div>
+            <div class="backup-stat-value" id="backupLast" style="font-size:0.85rem;">Nunca</div>
+            <div class="backup-stat-sub">data de exportação</div>
+          </div>
+          <div class="backup-stat reveal" data-delay="4">
+            <div class="backup-stat-icon pink"><i class="fas fa-edit"></i></div>
+            <div class="backup-stat-label">Última Modificação</div>
+            <div class="backup-stat-value" id="backupModified" style="font-size:0.85rem;">-</div>
+            <div class="backup-stat-sub">dos dados locais</div>
+          </div>
+        </div>
+
+        <!-- BACKUP ACTIONS -->
+        <div class="backup-actions">
+          
+          <!-- Exportar -->
+          <div class="backup-action-card reveal-left">
+            <h3><i class="fas fa-download"></i> Exportar Backup</h3>
+            <p>Cria um arquivo JSON completo com todos os registros do histórico, metadados da aplicação e timestamp. Guarde em local seguro.</p>
+            <button class="btn btn-primary btn-lg w-100" onclick="downloadBackup()">
+              <i class="fas fa-file-download"></i> Baixar Backup Completo
+            </button>
+          </div>
+
+          <!-- Restaurar -->
+          <div class="backup-action-card reveal-right">
+            <h3><i class="fas fa-upload"></i> Restaurar Backup</h3>
+            <p>Selecione um arquivo de backup (.json) para restaurar os dados. <strong>Atenção:</strong> os dados atuais serão substituídos.</p>
+            <div class="file-drop-zone" id="fileDropZone">
+              <i class="fas fa-cloud-upload-alt"></i>
+              <strong>Clique ou arraste o arquivo aqui</strong>
+              <small>Formato aceito: .json (backup gerado por este sistema)</small>
+              <input type="file" id="fileInput" accept=".json,application/json" style="display:none;" onchange="restoreBackup(event)">
+            </div>
+          </div>
+
+        </div>
+
+        <!-- DANGER ZONE -->
+        <div class="backup-danger-zone reveal">
+          <div class="danger-text">
+            <h4><i class="fas fa-exclamation-triangle"></i> Zona de Perigo</h4>
+            <p>Esta ação remove permanentemente todos os registros do histórico. Não pode ser desfeita.</p>
+          </div>
+          <button class="btn btn-danger" onclick="limparDados()">
+            <i class="fas fa-trash"></i> Limpar Todos os Dados
+          </button>
+        </div>
+
+        <!-- INFO BOX -->
+        <div class="backup-info-box">
+          <h4><i class="fas fa-lightbulb"></i> Boas práticas de backup</h4>
+          <ul>
+            <li><i class="fas fa-check"></i> Faça backup sempre após inserir dados importantes</li>
+            <li><i class="fas fa-check"></i> Guarde o arquivo em nuvem ou HD externo</li>
+            <li><i class="fas fa-check"></i> Mantenha múltiplas versões com datas diferentes</li>
+            <li><i class="fas fa-check"></i> Teste a restauração periodicamente para garantir integridade</li>
+            <li><i class="fas fa-check"></i> Os dados são armazenados localmente no navegador (localStorage)</li>
+          </ul>
+        </div>
+
       </div>
-      <div class="table-container">
-        <table class="premium-table">
-          <thead><tr><th>Data/Hora</th><th>Valor (R$)</th><th>Origem</th><th>Destino</th><th>DIFAL (R$)</th><th>FCP (R$)</th><th>Total (R$)</th><th>Tipo</th><th>Alíquotas</th></tr></thead>
-          <tbody id="corpo-tabela"><tr><td colspan="9" class="text-center" style="padding: 2rem;"><i class="fas fa-inbox"></i><br>Nenhum registro</td></tr></tbody>
-        </table>
-      </div>
+
     </div>
 
-    <div class="corporate-card">
-      <div class="card-header">
-        <div class="card-title"><i class="fas fa-download"></i><h3>Exportação</h3></div>
-      </div>
-      <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
-        <button class="btn btn-secondary" onclick="exportPDF()"><i class="fas fa-file-pdf"></i> PDF</button>
-        <button class="btn btn-secondary" onclick="exportExcel()"><i class="fas fa-file-excel"></i> Excel</button>
-        <button class="btn btn-outline" onclick="exportJSON()"><i class="fas fa-file-code"></i> JSON</button>
-        <button class="btn btn-danger" onclick="limparDados()"><i class="fas fa-trash"></i> Limpar</button>
-      </div>
-      <div class="alert alert-info" style="margin-top: 1rem;"><i class="fas fa-info-circle"></i> Alíquotas atualizadas para 2026 (Convênio ICMS 236/21)</div>
-    </div>
   </div>
 
   <footer class="copyright-footer">
     <div class="copyright-content">
       <div><i class="fas fa-copyright"></i> 2026 <span class="brand">Raven Tech Solutions</span> - Todos os direitos reservados</div>
       <div><i class="fas fa-user-tie"></i> CEO: <span class="ceo">Cleilton Nascimento</span></div>
-      <div><i class="fas fa-code-branch"></i> Versão 3.2.0</div>
+      <div><i class="fas fa-code-branch"></i> Versão <span class="app-version">3.6.0</span></div>
     </div>
   </footer>
 </div>
 
 <script>
-// Função para mostrar modal de confirmação de logout
+/* ============================================================
+   CONFIGURAÇÃO GLOBAL
+   ============================================================ */
+const APP_CONFIG = Object.freeze({
+  NAME: 'ERP DIFAL PRO',
+  YEAR: '2026',
+  VERSION: '3.6.0',
+  VERSION_SHORT: 'v3.6',
+  COMPANY: 'Raven Tech Solutions',
+  BRAND: 'GSF Fiscal',
+  CEO: 'Cleilton Nascimento',
+  COPYRIGHT_YEAR: '2026'
+});
+
+function applyAppVersion() {
+  document.querySelectorAll('.app-version').forEach(el => {
+    el.textContent = el.textContent.includes('.0') && el.textContent.length > 4
+      ? APP_CONFIG.VERSION_SHORT
+      : APP_CONFIG.VERSION;
+  });
+  document.title = `${APP_CONFIG.NAME} ${APP_CONFIG.YEAR} | ${APP_CONFIG.COMPANY}`;
+}
+
+/* ============================================================
+   INTERSECTION OBSERVER
+   ============================================================ */
+function initRevealAnimations() {
+  const els = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  if (els.length === 0) return;
+
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(el => el.classList.add('visible'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  els.forEach(el => observer.observe(el));
+}
+
+/* ==================== LOGOUT MODAL ==================== */
 function showLogoutConfirmModal() {
-  // Remove modal existente se houver
-  const existingModal = document.querySelector('.modal-overlay');
-  if (existingModal) existingModal.remove();
+  const existing = document.querySelector('.modal-overlay');
+  if (existing) existing.remove();
   
   const modalHtml = `
     <div class="modal-overlay">
       <div class="modal-container">
-        <div class="modal-icon">
-          <i class="fas fa-sign-out-alt"></i>
-        </div>
+        <div class="modal-icon"><i class="fas fa-sign-out-alt"></i></div>
         <h3>Sair do Sistema</h3>
         <p>Tem certeza que deseja sair?<br>Você precisará fazer login novamente.</p>
         <div class="modal-buttons">
-          <button class="modal-btn modal-btn-confirm" onclick="confirmLogout()">
-            <i class="fas fa-check"></i> Sim, sair
-          </button>
-          <button class="modal-btn modal-btn-cancel" onclick="closeLogoutModal()">
-            <i class="fas fa-times"></i> Cancelar
-          </button>
+          <button class="modal-btn modal-btn-confirm" onclick="confirmLogout()"><i class="fas fa-check"></i> Sim, sair</button>
+          <button class="modal-btn modal-btn-cancel" onclick="closeLogoutModal()"><i class="fas fa-times"></i> Cancelar</button>
         </div>
       </div>
-    </div>
-  `;
+    </div>`;
   document.body.insertAdjacentHTML('beforeend', modalHtml);
 }
 
 function closeLogoutModal() {
-  const modal = document.querySelector('.modal-overlay');
-  if (modal) modal.remove();
+  const m = document.querySelector('.modal-overlay');
+  if (m) m.remove();
 }
 
 function confirmLogout() {
@@ -1238,6 +1657,7 @@ function confirmLogout() {
   logout();
 }
 
+/* ==================== TEMA ==================== */
 function setTheme(theme) {
   if (theme === 'dark') {
     document.body.classList.add('dark-theme');
@@ -1247,6 +1667,7 @@ function setTheme(theme) {
     localStorage.setItem('theme', 'light');
   }
   updateThemeButtons();
+  if (typeof gerarGrafico === 'function' && usuarioLogado) gerarGrafico();
 }
 
 function updateThemeButtons() {
@@ -1267,6 +1688,25 @@ function loadTheme() {
   updateThemeButtons();
 }
 
+/* ==================== TABS ==================== */
+function switchTab(tabName) {
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.tab === tabName);
+  });
+  document.querySelectorAll('.tab-pane').forEach(pane => {
+    pane.classList.toggle('active', pane.id === 'tab-' + tabName);
+  });
+  
+  if (tabName === 'principal' && usuarioLogado) {
+    setTimeout(() => gerarGrafico(), 80);
+  }
+  if (tabName === 'backup') {
+    updateBackupStats();
+    setTimeout(initRevealAnimations, 50);
+  }
+}
+
+/* ==================== DADOS ==================== */
 let usuarioLogado = null;
 let dados = JSON.parse(localStorage.getItem("dados")) || [];
 let graficoAtual = null;
@@ -1293,15 +1733,15 @@ const aliquotasInternas2026 = {
 
 function getAliquotaInterestadual2026(origem, destino) {
   if (origem === destino) return aliquotasInternas2026[origem];
-  const regiaoOrigem = regioes[origem];
-  const regiaoDestino = regioes[destino];
-  if ((regiaoOrigem === 'Sul' || regiaoOrigem === 'Sudeste') && (regiaoDestino === 'Norte' || regiaoDestino === 'Nordeste')) return 7;
-  if ((regiaoOrigem === 'Norte' || regiaoOrigem === 'Nordeste') && (regiaoDestino === 'Sul' || regiaoDestino === 'Sudeste')) return 12;
+  const ro = regioes[origem];
+  const rd = regioes[destino];
+  if ((ro === 'Sul' || ro === 'Sudeste') && (rd === 'Norte' || rd === 'Nordeste')) return 7;
+  if ((ro === 'Norte' || ro === 'Nordeste') && (rd === 'Sul' || rd === 'Sudeste')) return 12;
   return 12;
 }
 
 function getFCP2026(estado) {
-  const fcpEstados = {
+  const fcp = {
     'BA': 3.0, 'CE': 2.5, 'MA': 2.5, 'PE': 2.5, 'PI': 2.5,
     'SP': 2.0, 'RJ': 2.0, 'MG': 2.0, 'PR': 2.0, 'SC': 2.0,
     'RS': 1.5, 'ES': 1.5, 'GO': 1.5, 'MT': 1.5, 'MS': 1.5,
@@ -1309,18 +1749,18 @@ function getFCP2026(estado) {
     'PA': 1.0, 'PB': 1.5, 'RN': 1.5, 'RO': 1.0, 'RR': 1.0,
     'SE': 1.5, 'TO': 1.0
   };
-  return fcpEstados[estado] || 2.0;
+  return fcp[estado] || 2.0;
 }
 
-function calcularDIFAL2026(valor, aliqInterna, aliqInterestadual, fcp, tipoCalculo) {
+function calcularDIFAL2026(valor, aliqInt, aliqInter, fcp, tipo) {
   let difal, valorFcp, total;
-  if (tipoCalculo === 'dentro') {
-    let baseCalculo = valor / (1 - (aliqInterna / 100));
-    difal = baseCalculo * (aliqInterna / 100) - baseCalculo * (aliqInterestadual / 100);
-    valorFcp = baseCalculo * (fcp / 100);
+  if (tipo === 'dentro') {
+    const bc = valor / (1 - (aliqInt / 100));
+    difal = bc * (aliqInt / 100) - bc * (aliqInter / 100);
+    valorFcp = bc * (fcp / 100);
     total = difal + valorFcp;
   } else {
-    difal = valor * (aliqInterna / 100) - valor * (aliqInterestadual / 100);
+    difal = valor * (aliqInt / 100) - valor * (aliqInter / 100);
     valorFcp = valor * (fcp / 100);
     total = difal + valorFcp;
   }
@@ -1331,24 +1771,32 @@ function showAlert(message, type = 'success') {
   const alertDiv = document.createElement('div');
   alertDiv.className = `alert alert-${type}`;
   alertDiv.innerHTML = `<i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i> ${message}`;
-  const wrapper = document.querySelector('.app-wrapper');
-  if (wrapper) wrapper.insertBefore(alertDiv, wrapper.firstChild);
-  else document.querySelector('.login-wrapper').insertBefore(alertDiv, document.querySelector('.login-card'));
+  
+  const isLogged = usuarioLogado && !document.getElementById('sistema').classList.contains('hidden');
+  if (isLogged) {
+    const wrapper = document.querySelector('.app-wrapper');
+    if (wrapper) wrapper.insertBefore(alertDiv, wrapper.firstChild);
+  } else {
+    const lw = document.querySelector('.login-wrapper');
+    const lc = document.querySelector('.login-card');
+    if (lw && lc) lw.insertBefore(alertDiv, lc);
+  }
   setTimeout(() => alertDiv.remove(), 4000);
 }
 
 function updateStats() {
   document.getElementById('totalCalculos').textContent = dados.length;
-  let valorTotal = dados.reduce((acc, d) => acc + parseFloat(d.total || 0), 0);
-  document.getElementById('valorTotal').textContent = 'R$ ' + valorTotal.toFixed(2).replace('.', ',');
-  if(dados.length > 0) {
-    document.getElementById('ultimoCalculo').textContent = new Date(dados[dados.length - 1].data).toLocaleString('pt-BR');
+  const vTotal = dados.reduce((acc, d) => acc + parseFloat(d.total || 0), 0);
+  document.getElementById('valorTotal').textContent = 'R$ ' + vTotal.toFixed(2).replace('.', ',');
+  if (dados.length > 0) {
+    document.getElementById('ultimoCalculo').textContent =
+      new Date(dados[dados.length - 1].data).toLocaleString('pt-BR');
   }
 }
 
 function login() {
-  let username = document.getElementById("username").value;
-  let senha = document.getElementById("password").value;
+  const username = document.getElementById("username").value;
+  const senha = document.getElementById("password").value;
   if (usuarios[username] && usuarios[username].senha === senha) {
     usuarioLogado = { ...usuarios[username], login: username };
     document.getElementById("login").classList.add("hidden");
@@ -1356,17 +1804,17 @@ function login() {
     document.getElementById("userName").textContent = usuarioLogado.nome;
     document.getElementById("userAvatar").textContent = username === 'Ceo' ? 'CN' : 'DA';
     document.getElementById("userRole").textContent = username === 'Ceo' ? 'CEO - Raven Tech' : 'Analista';
-    const accessSpan = document.getElementById("accessLevel");
-    accessSpan.innerHTML = '<span class="access-level access-total"><i class="fas fa-crown"></i> Acesso Total</span>';
+    document.getElementById("accessLevel").innerHTML =
+      '<span class="access-level access-total"><i class="fas fa-crown"></i> Acesso Total</span>';
     
-    // Adiciona evento de clique no perfil do usuário para mostrar modal de logout
-    const userProfileBtn = document.getElementById('userProfileBtn');
-    userProfileBtn.onclick = showLogoutConfirmModal;
+    document.getElementById('userProfileBtn').onclick = showLogoutConfirmModal;
     
     atualizarTabela();
     gerarGrafico();
     updateStats();
+    updateBackupStats();
     showAlert(`Bem-vindo ${usuarioLogado.nome}! Acesso total ao sistema.`, 'success');
+    setTimeout(initRevealAnimations, 100);
   } else {
     showAlert('Credenciais inválidas!', 'error');
   }
@@ -1376,9 +1824,9 @@ function logout() {
   usuarioLogado = null;
   document.getElementById("login").classList.remove("hidden");
   document.getElementById("sistema").classList.add("hidden");
-  // Reset dos campos de login
   document.getElementById("username").value = "Davi";
   document.getElementById("password").value = "1234@";
+  switchTab('principal');
   showAlert('Você saiu do sistema. Até logo!', 'info');
 }
 
@@ -1393,148 +1841,346 @@ function preencherExemplo() {
 
 function mostrarTabelaAliquotas() {
   let html = `<div style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--bg-card);z-index:9999;padding:20px;border-radius:20px;max-width:90%;max-height:80%;overflow:auto;box-shadow:0 20px 60px rgba(0,0,0,0.3);border:1px solid var(--border-color);"><div style="display:flex;justify-content:space-between;margin-bottom:20px;"><h3 style="color:var(--text-primary);"><i class="fas fa-table"></i> Alíquotas 2026</h3><button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;font-size:24px;cursor:pointer;color:var(--text-primary);">&times;</button></div><table style="width:100%;border-collapse:collapse;"><thead><tr style="background:var(--primary);color:white;"><th>Estado</th><th>Região</th><th>Alíquota</th><th>FCP</th></tr></thead><tbody>`;
-  for (let [uf, aliquota] of Object.entries(aliquotasInternas2026)) {
+  for (const [uf, aliquota] of Object.entries(aliquotasInternas2026)) {
     html += `<tr><td style="padding:6px;"><strong>${uf}</strong></td><td style="padding:6px;">${regioes[uf]}</td><td style="padding:6px;">${aliquota}%</td><td style="padding:6px;">${getFCP2026(uf)}%</td></tr>`;
   }
-  html += `</tbody></table><div style="margin-top:15px;padding:10px;background:rgba(13,71,161,0.1);border-radius:10px;"><small>Interestaduais: 7% (Norte/Nordeste), 12% (Sul/Sudeste)</small></div></div>`;
+  html += `</tbody></table><div style="margin-top:15px;padding:10px;background:rgba(11,94,215,0.1);border-radius:10px;"><small>Interestaduais: 7% (Norte/Nordeste), 12% (Sul/Sudeste)</small></div></div>`;
   document.body.insertAdjacentHTML('beforeend', html);
 }
 
 function calcular() {
-  let valor = parseFloat(document.getElementById("valor").value);
-  let origem = document.getElementById("origem").value;
-  let destino = document.getElementById("destino").value;
-  let ncm = document.getElementById("ncm").value || "N/A";
-  let tipoCalculo = document.querySelector('input[name="tipoCalculo"]:checked').value;
-  let baseLegal = document.getElementById("baseLegal").value;
+  const valor = parseFloat(document.getElementById("valor").value);
+  const origem = document.getElementById("origem").value;
+  const destino = document.getElementById("destino").value;
+  const ncm = document.getElementById("ncm").value || "N/A";
+  const tipoCalculo = document.querySelector('input[name="tipoCalculo"]:checked').value;
+  const baseLegal = document.getElementById("baseLegal").value;
   
-  if(isNaN(valor) || valor <= 0) { showAlert('Valor inválido!', 'error'); return; }
-  if(origem === destino) { showAlert('Origem e destino não podem ser iguais!', 'error'); return; }
+  if (isNaN(valor) || valor <= 0) { showAlert('Valor inválido!', 'error'); return; }
+  if (origem === destino) { showAlert('Origem e destino não podem ser iguais!', 'error'); return; }
   
-  let aliqInterna = aliquotasInternas2026[destino];
-  let aliqInterestadual = getAliquotaInterestadual2026(origem, destino);
-  let fcp = getFCP2026(destino);
-  let multiplicador = baseLegal === 'difal2026' ? 1.05 : (baseLegal === 'simples' ? 0.7 : 1);
+  const aliqInterna = aliquotasInternas2026[destino];
+  const aliqInterestadual = getAliquotaInterestadual2026(origem, destino);
+  const fcp = getFCP2026(destino);
+  const multiplicador = baseLegal === 'difal2026' ? 1.05 : (baseLegal === 'simples' ? 0.7 : 1);
   let { difal, valorFcp, total } = calcularDIFAL2026(valor, aliqInterna, aliqInterestadual, fcp, tipoCalculo);
   
   difal *= multiplicador;
   valorFcp *= multiplicador;
   total *= multiplicador;
   
-  let registro = {
+  const registro = {
     id: Date.now(), valor: valor.toFixed(2), origem, destino, ncm,
     difal: difal.toFixed(2), fcp: valorFcp.toFixed(2), total: total.toFixed(2),
     data: new Date().toISOString(), aliqInterna, aliqInterestadual, fcp,
     tipoCalculo, baseLegal, regiaoOrigem: regioes[origem], regiaoDestino: regioes[destino],
-    usuario: usuarioLogado.login
+    usuario: usuarioLogado.login,
+    appVersion: APP_CONFIG.VERSION
   };
   
   dados.push(registro);
   localStorage.setItem("dados", JSON.stringify(dados));
+  localStorage.setItem("dadosModificado", new Date().toISOString());
   
   document.getElementById("resultado").classList.remove("hidden");
-  document.getElementById("resultado").innerHTML = `<div class="result-header"><i class="fas fa-crown"></i><h4>Resultado</h4></div><div class="result-content"><div class="result-item"><div class="label">DIFAL</div><div class="value">R$ ${difal.toFixed(2)}</div><div class="detail">Interna: ${aliqInterna}%</div></div><div class="result-item"><div class="label">FCP</div><div class="value">R$ ${valorFcp.toFixed(2)}</div><div class="detail">FCP: ${fcp}%</div></div><div class="result-item"><div class="label">TOTAL</div><div class="value">R$ ${total.toFixed(2)}</div><div class="detail">${origem} → ${destino}</div></div><div class="result-item"><div class="label">Interestadual</div><div class="value">${aliqInterestadual}%</div><div class="detail">${baseLegal === 'difal2026' ? 'Convênio 236/21' : (baseLegal === 'simples' ? 'Simples' : 'LC 87/96')}</div></div></div>`;
+  document.getElementById("resultado").innerHTML =
+    `<div class="result-header"><i class="fas fa-crown"></i><h4>Resultado</h4></div><div class="result-content"><div class="result-item"><div class="label">DIFAL</div><div class="value">R$ ${difal.toFixed(2)}</div><div class="detail">Interna: ${aliqInterna}%</div></div><div class="result-item"><div class="label">FCP</div><div class="value">R$ ${valorFcp.toFixed(2)}</div><div class="detail">FCP: ${fcp}%</div></div><div class="result-item"><div class="label">TOTAL</div><div class="value">R$ ${total.toFixed(2)}</div><div class="detail">${origem} → ${destino}</div></div><div class="result-item"><div class="label">Interestadual</div><div class="value">${aliqInterestadual}%</div><div class="detail">${baseLegal === 'difal2026' ? 'Convênio 236/21' : (baseLegal === 'simples' ? 'Simples' : 'LC 87/96')}</div></div></div>`;
   
   atualizarTabela();
   gerarGrafico();
   updateStats();
+  updateBackupStats();
 }
 
 function gerarGrafico() {
-  let meses = {};
+  const el = document.getElementById("grafico");
+  if (!el) return;
+  const meses = {};
   dados.forEach(d => {
-    let mes = new Date(d.data).toLocaleString('pt-BR', { month: 'short', year: 'numeric' });
+    const mes = new Date(d.data).toLocaleString('pt-BR', { month: 'short', year: 'numeric' });
     meses[mes] = (meses[mes] || 0) + parseFloat(d.total);
   });
-  if(graficoAtual) graficoAtual.destroy();
-  graficoAtual = new Chart(document.getElementById("grafico"), {
+  if (graficoAtual) graficoAtual.destroy();
+  const isDark = document.body.classList.contains('dark-theme');
+  graficoAtual = new Chart(el, {
     type: "line",
-    data: { labels: Object.keys(meses).length ? Object.keys(meses) : ["Sem dados"], datasets: [{ label: "Total Mensal (R$)", data: Object.values(meses).length ? Object.values(meses) : [0], borderColor: "#c62828", backgroundColor: "rgba(198,40,40,0.1)", tension: 0.4, fill: true }] },
-    options: { responsive: true, maintainAspectRatio: false, plugins: { tooltip: { callbacks: { label: (ctx) => 'R$ ' + ctx.raw.toFixed(2) } } } }
+    data: {
+      labels: Object.keys(meses).length ? Object.keys(meses) : ["Sem dados"],
+      datasets: [{
+        label: "Total Mensal (R$)",
+        data: Object.values(meses).length ? Object.values(meses) : [0],
+        borderColor: "#0b5ed7",
+        backgroundColor: "rgba(11,94,215,0.1)",
+        tension: 0.4, fill: true,
+        pointBackgroundColor: "#00b4ff",
+        pointBorderColor: "#0b5ed7",
+        pointRadius: 5
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { labels: { color: isDark ? '#e6edf7' : '#0a1e3f' } },
+        tooltip: { callbacks: { label: (ctx) => 'R$ ' + ctx.raw.toFixed(2) } }
+      },
+      scales: {
+        x: { ticks: { color: isDark ? '#a8b6c8' : '#37474f' }, grid: { color: isDark ? '#1e2a3f' : '#e2e8f0' } },
+        y: { ticks: { color: isDark ? '#a8b6c8' : '#37474f' }, grid: { color: isDark ? '#1e2a3f' : '#e2e8f0' } }
+      }
+    }
   });
 }
 
 function atualizarTabela() {
-  let tbody = document.getElementById("corpo-tabela");
+  const tbody = document.getElementById("corpo-tabela");
   tbody.innerHTML = "";
-  if(dados.length === 0) { tbody.innerHTML = "<tr><td colspan='9' class='text-center'>Nenhum registro</td></tr>"; document.getElementById('registroCount').textContent = '0 registros'; return; }
+  if (dados.length === 0) {
+    tbody.innerHTML = "<tr><td colspan='9' class='text-center' style='padding:2rem;'><i class='fas fa-inbox'></i><br>Nenhum registro</td></tr>";
+    document.getElementById('registroCount').textContent = '0 registros';
+    return;
+  }
   document.getElementById('registroCount').textContent = `${dados.length} registros`;
   dados.slice().reverse().forEach(d => {
-    let row = tbody.insertRow();
+    const row = tbody.insertRow();
     row.innerHTML = `<td>${new Date(d.data).toLocaleString('pt-BR')}</td><td><strong>R$ ${parseFloat(d.valor).toFixed(2)}</strong></td><td><span class="state-badge badge-${d.regiaoOrigem.toLowerCase()}">${d.origem}</span></td><td><span class="state-badge badge-${d.regiaoDestino.toLowerCase()}">${d.destino}</span></td><td class="value-positive">R$ ${parseFloat(d.difal).toFixed(2)}</td><td class="value-positive">R$ ${parseFloat(d.fcp).toFixed(2)}</td><td class="value-highlight">R$ ${parseFloat(d.total).toFixed(2)}</td><td><span style="background:${d.tipoCalculo === 'dentro' ? '#ff8f00' : '#2e7d32'};color:white;padding:2px 6px;border-radius:6px;">${d.tipoCalculo === 'dentro' ? 'Dentro' : 'Fora'}</span></td><td>${d.aliqInterna}%/${d.aliqInterestadual}%</td>`;
   });
 }
 
 function filtrar() {
-  let inicio = document.getElementById("inicio").value;
-  let fim = document.getElementById("fim").value;
-  let filtrados = dados.filter(d => {
-    let dataRegistro = d.data.substring(0,10);
-    return (!inicio || dataRegistro >= inicio) && (!fim || dataRegistro <= fim);
+  const inicio = document.getElementById("inicio").value;
+  const fim = document.getElementById("fim").value;
+  const filtrados = dados.filter(d => {
+    const dr = d.data.substring(0, 10);
+    return (!inicio || dr >= inicio) && (!fim || dr <= fim);
   });
-  if(filtrados.length > 0) {
-    let total = filtrados.reduce((acc, d) => acc + parseFloat(d.total), 0);
-    showAlert(`${filtrados.length} registros | Total: R$ ${total.toFixed(2)}`, 'success');
+  if (filtrados.length > 0) {
+    const t = filtrados.reduce((a, d) => a + parseFloat(d.total), 0);
+    showAlert(`${filtrados.length} registros | Total: R$ ${t.toFixed(2)}`, 'success');
   } else {
     showAlert('Nenhum registro no período.', 'error');
   }
 }
 
+/* ==================== EXPORTAÇÃO (RELATÓRIOS) ==================== */
 function exportPDF() {
-  if(dados.length === 0) { showAlert('Nenhum dado!', 'error'); return; }
+  if (dados.length === 0) { showAlert('Nenhum dado!', 'error'); return; }
   const { jsPDF } = window.jspdf;
-  let doc = new jsPDF('landscape', 'mm', 'a4');
-  doc.setFillColor(13, 71, 161);
+  const doc = new jsPDF('landscape', 'mm', 'a4');
+  doc.setFillColor(11, 94, 215);
   doc.rect(0, 0, 300, 40, 'F');
-  doc.setTextColor(255,255,255);
+  doc.setTextColor(255, 255, 255);
   doc.setFontSize(18);
   doc.text("RELATÓRIO DIFAL 2026", 20, 20);
   doc.setFontSize(9);
-  doc.text(`CEO: Cleilton Nascimento | ${new Date().toLocaleString('pt-BR')} | Usuário: ${usuarioLogado.login}`, 20, 30);
-  let totalGeral = dados.reduce((acc, d) => acc + parseFloat(d.total), 0);
-  doc.setTextColor(0,0,0);
+  doc.text(`CEO: ${APP_CONFIG.CEO} | ${new Date().toLocaleString('pt-BR')} | Usuário: ${usuarioLogado.login} | Versão: ${APP_CONFIG.VERSION}`, 20, 30);
+  const tGeral = dados.reduce((a, d) => a + parseFloat(d.total), 0);
+  doc.setTextColor(0, 0, 0);
   doc.setFontSize(11);
   doc.text("SUMÁRIO", 20, 50);
   doc.setFontSize(9);
-  doc.text(`Total: R$ ${totalGeral.toFixed(2)} | Operações: ${dados.length}`, 20, 57);
-  const tableData = dados.slice().reverse().map(d => [new Date(d.data).toLocaleString('pt-BR'), `R$ ${parseFloat(d.valor).toFixed(2)}`, d.origem, d.destino, `R$ ${parseFloat(d.difal).toFixed(2)}`, `R$ ${parseFloat(d.fcp).toFixed(2)}`, `R$ ${parseFloat(d.total).toFixed(2)}`]);
-  doc.autoTable({ head: [['Data', 'Valor', 'Origem', 'Destino', 'DIFAL', 'FCP', 'Total']], body: tableData, startY: 70, theme: 'striped', headStyles: { fillColor: [198,40,40] } });
-  for(let i = 1; i <= doc.internal.getNumberOfPages(); i++) { doc.setPage(i); doc.setFontSize(7); doc.text(`© 2026 Raven Tech Solutions - Todos os direitos reservados`, 20, 195); }
+  doc.text(`Total: R$ ${tGeral.toFixed(2)} | Operações: ${dados.length}`, 20, 57);
+  const tableData = dados.slice().reverse().map(d => [
+    new Date(d.data).toLocaleString('pt-BR'),
+    `R$ ${parseFloat(d.valor).toFixed(2)}`, d.origem, d.destino,
+    `R$ ${parseFloat(d.difal).toFixed(2)}`, `R$ ${parseFloat(d.fcp).toFixed(2)}`,
+    `R$ ${parseFloat(d.total).toFixed(2)}`
+  ]);
+  doc.autoTable({
+    head: [['Data', 'Valor', 'Origem', 'Destino', 'DIFAL', 'FCP', 'Total']],
+    body: tableData, startY: 70, theme: 'striped',
+    headStyles: { fillColor: [11, 94, 215] }
+  });
+  for (let i = 1; i <= doc.internal.getNumberOfPages(); i++) {
+    doc.setPage(i);
+    doc.setFontSize(7);
+    doc.text(`© ${APP_CONFIG.COPYRIGHT_YEAR} ${APP_CONFIG.COMPANY} - Todos os direitos reservados | ${APP_CONFIG.VERSION}`, 20, 195);
+  }
   doc.save("relatorio-difal-2026.pdf");
   showAlert('PDF gerado!', 'success');
 }
 
 function exportExcel() {
-  if(dados.length === 0) { showAlert('Nenhum dado!', 'error'); return; }
-  let dadosExport = dados.map(d => ({ 'Data': new Date(d.data).toLocaleString('pt-BR'), 'Valor': parseFloat(d.valor), 'Origem': d.origem, 'Destino': d.destino, 'DIFAL': parseFloat(d.difal), 'FCP': parseFloat(d.fcp), 'Total': parseFloat(d.total) }));
-  let wb = XLSX.utils.book_new();
-  XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(dadosExport), "DIFAL 2026");
+  if (dados.length === 0) { showAlert('Nenhum dado!', 'error'); return; }
+  const de = dados.map(d => ({
+    'Data': new Date(d.data).toLocaleString('pt-BR'),
+    'Valor': parseFloat(d.valor), 'Origem': d.origem, 'Destino': d.destino,
+    'DIFAL': parseFloat(d.difal), 'FCP': parseFloat(d.fcp), 'Total': parseFloat(d.total)
+  }));
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(de), "DIFAL 2026");
   XLSX.writeFile(wb, "relatorio-difal-2026.xlsx");
   showAlert('Excel gerado!', 'success');
 }
 
 function exportJSON() {
-  if(dados.length === 0) { showAlert('Nenhum dado!', 'error'); return; }
+  if (dados.length === 0) { showAlert('Nenhum dado!', 'error'); return; }
   const link = document.createElement('a');
   link.href = 'data:application/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(dados, null, 2));
-  link.download = 'backup-difal-2026.json';
+  link.download = 'dados-difal-2026.json';
   link.click();
   showAlert('JSON exportado!', 'success');
 }
 
+/* ==================== BACKUP ==================== */
+function updateBackupStats() {
+  const count = dados.length;
+  const jsonStr = JSON.stringify(dados);
+  const sizeBytes = new Blob([jsonStr]).size;
+  const sizeKB = sizeBytes < 1024
+    ? sizeBytes + ' B'
+    : (sizeBytes / 1024).toFixed(2) + ' KB';
+  
+  document.getElementById('backupCount').textContent = count;
+  document.getElementById('backupSize').textContent = sizeKB;
+  
+  const lastBackup = localStorage.getItem('ultimoBackup');
+  document.getElementById('backupLast').textContent = lastBackup
+    ? new Date(lastBackup).toLocaleString('pt-BR')
+    : 'Nunca';
+  
+  const lastMod = localStorage.getItem('dadosModificado');
+  if (lastMod) {
+    document.getElementById('backupModified').textContent = new Date(lastMod).toLocaleString('pt-BR');
+  } else {
+    document.getElementById('backupModified').textContent = count > 0 ? 'Desconhecido' : '-';
+  }
+}
+
+function downloadBackup() {
+  if (dados.length === 0) {
+    showAlert('Não há dados para fazer backup!', 'warning');
+    return;
+  }
+  
+  const backup = {
+    app: APP_CONFIG.NAME,
+    version: APP_CONFIG.VERSION,
+    timestamp: new Date().toISOString(),
+    user: usuarioLogado ? usuarioLogado.login : 'sistema',
+    totalRegistros: dados.length,
+    data: dados
+  };
+  
+  const json = JSON.stringify(backup, null, 2);
+  const blob = new Blob([json], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  const dataStr = new Date().toISOString().slice(0, 10);
+  a.href = url;
+  a.download = `backup-difal-2026-${dataStr}.json`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  
+  localStorage.setItem('ultimoBackup', new Date().toISOString());
+  updateBackupStats();
+  showAlert('Backup baixado com sucesso!', 'success');
+}
+
+function restoreBackup(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  
+  if (!file.name.endsWith('.json')) {
+    showAlert('Por favor, selecione um arquivo .json válido!', 'error');
+    event.target.value = '';
+    return;
+  }
+  
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    try {
+      const content = JSON.parse(e.target.result);
+      let registros = [];
+      
+      if (Array.isArray(content)) {
+        registros = content;
+      } else if (content.data && Array.isArray(content.data)) {
+        registros = content.data;
+      } else {
+        throw new Error('Formato de backup inválido');
+      }
+      
+      if (registros.length === 0) {
+        showAlert('O arquivo de backup está vazio!', 'warning');
+        return;
+      }
+      
+      const validos = registros.filter(r => r && typeof r === 'object' && (r.valor || r.total));
+      if (validos.length === 0) {
+        throw new Error('Nenhum registro válido encontrado no arquivo');
+      }
+      
+      const msg = `Restaurar ${validos.length} registro(s)?\n\nAtenção: os dados atuais (${dados.length} registros) serão substituídos.`;
+      if (confirm(msg)) {
+        dados = validos;
+        localStorage.setItem('dados', JSON.stringify(dados));
+        localStorage.setItem('dadosModificado', new Date().toISOString());
+        
+        atualizarTabela();
+        gerarGrafico();
+        updateStats();
+        updateBackupStats();
+        
+        showAlert(`${validos.length} registros restaurados com sucesso!`, 'success');
+      }
+    } catch (err) {
+      showAlert('Erro ao restaurar backup: ' + err.message, 'error');
+    }
+  };
+  reader.onerror = () => showAlert('Erro ao ler o arquivo.', 'error');
+  reader.readAsText(file);
+  event.target.value = '';
+}
+
 function limparDados() {
-  if(confirm("⚠️ ATENÇÃO! Tem certeza que deseja limpar TODOS os dados do histórico? Esta ação não pode ser desfeita.")) {
+  if (dados.length === 0) {
+    showAlert('Não há dados para limpar.', 'info');
+    return;
+  }
+  if (confirm(`⚠️ ATENÇÃO!\n\nTem certeza que deseja limpar TODOS os ${dados.length} registros do histórico?\n\nEsta ação não pode ser desfeita. Considere fazer um backup antes.`)) {
     dados = [];
     localStorage.removeItem("dados");
+    localStorage.removeItem("dadosModificado");
     atualizarTabela();
     gerarGrafico();
     updateStats();
+    updateBackupStats();
     document.getElementById("resultado").classList.add("hidden");
     showAlert('Histórico limpo com sucesso!', 'success');
   }
 }
 
-document.addEventListener('DOMContentLoaded', function() { loadTheme(); if(dados.length > 0) updateStats(); });
+/* ==================== INICIALIZAÇÃO ==================== */
+document.addEventListener('DOMContentLoaded', function() {
+  applyAppVersion();
+  loadTheme();
+  initRevealAnimations();
+  updateBackupStats();
+  if (dados.length > 0) updateStats();
+  
+  const dz = document.getElementById('fileDropZone');
+  const fi = document.getElementById('fileInput');
+  
+  if (dz && fi) {
+    dz.addEventListener('click', () => fi.click());
+    
+    dz.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      dz.classList.add('dragover');
+    });
+    dz.addEventListener('dragleave', () => dz.classList.remove('dragover'));
+    dz.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dz.classList.remove('dragover');
+      if (e.dataTransfer.files.length > 0) {
+        fi.files = e.dataTransfer.files;
+        restoreBackup({ target: fi });
+      }
+    });
+  }
+});
 </script>
 </body>
 </html>
